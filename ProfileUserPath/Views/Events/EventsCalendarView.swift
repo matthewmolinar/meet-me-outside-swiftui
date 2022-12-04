@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct EventsCalendarView: View {
-    
+    @EnvironmentObject var eventStore: EventStore
     
     var body: some View {
         NavigationStack {
@@ -26,5 +26,6 @@ struct EventsCalendarView: View {
 struct EventsCalendarView_Previews: PreviewProvider {
     static var previews: some View {
         EventsCalendarView()
+            .environmentObject(EventStore(preview: true))
     }
 }
