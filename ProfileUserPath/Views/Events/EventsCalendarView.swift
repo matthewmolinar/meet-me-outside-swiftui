@@ -13,7 +13,7 @@ struct EventsCalendarView: View {
     var body: some View {
         NavigationStack {
             ScrollView {
-                CalendarView(interval: DateInterval(start: .distantPast, end: .distantFuture))
+                CalendarView(interval: DateInterval(start: .distantPast, end: .distantFuture), eventStore: eventStore)
                 
             }
                     .navigationTitle("Calendar")
