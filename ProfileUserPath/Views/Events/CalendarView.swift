@@ -17,7 +17,8 @@ struct CalendarView: UIViewRepresentable {
     @ObservedObject var eventStore: EventStore
     
     func makeUIView(context: Context) -> UICalendarView {
-         let view = UICalendarView()
+        let view = UICalendarView()
+        view.delegate = context.coordinator
         view.calendar = Calendar(identifier: .gregorian)
         view.availableDateRange = interval
         return view
@@ -39,7 +40,24 @@ struct CalendarView: UIViewRepresentable {
         @MainActor
         func calendarView(_ calendarView: UICalendarView, decorationFor dateComponents: DateComponents) -> UICalendarView.Decoration? {
             // this is what is used to create the icons or display particular events, its from UIKit so needs to be on Main thread, thats why @MainActor
-            return nil
+            
+            
+            
+            // determine if there are any events in the store for a date
+            let currentEvents = eventStore.events
+                .filter { $0.date.startOfDay == dateComponents.date?.startOfDay }
+            if currentEvents.isEmpty { return nil }
+            
+            if currentEvents.count > 1 {
+                return .image(UIImage(systemName: "doc.on.doc.fill"), color: .red, size: .large)
+            }
+            
+            let singleEvent = currentEvents.first!
+            return .customView {
+                let icon = UILabel()
+                icon.text = singleEvent.eventType.icon
+                return icon
+            }
         }
         
         
