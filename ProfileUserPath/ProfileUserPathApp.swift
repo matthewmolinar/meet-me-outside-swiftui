@@ -30,6 +30,7 @@ struct ProfileUserPathApp: App {
         WindowGroup {
             if isLoggedIn || Auth.auth().currentUser != nil {
                 ContentView()
+                    .environmentObject(userEvents)
             } else {
                 LoginView {
                     isLoggedIn = true

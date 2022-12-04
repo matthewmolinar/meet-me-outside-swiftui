@@ -11,7 +11,7 @@ import FirebaseFirestore
 import FirebaseFirestoreSwift
 
 struct ContentView: View {
-    
+    @EnvironmentObject var userEvents: EventStore
     @State var user: User? = nil
     @State var showSheet = false
     @State var loading: Bool = false
@@ -164,19 +164,25 @@ struct ContentView: View {
                 }
                 // Second tab
                 // TODO: Groups
-                ConservationsView()
-                    .tabItem {
-                        Image(systemName: "envelope.circle.fill")
-                        Text("Groups")
-                    }
+//                ConservationsView()
+//                    .tabItem {
+//                        Image(systemName: "envelope.circle.fill")
+//                        Text("Groups")
+//                    }
                 
                 
                 
                 // Third tab TODO: Calendar
-                Text("Calendar")
+                EventsCalendarView()
                     .tabItem {
                         Image(systemName: "calendar.circle.fill")
                         Text("Calendar")
+                    }
+                
+                EventsListView()
+                    .tabItem {
+                        Image(systemName: "list.triangle")
+                        Text("Events")
                     }
             }
             
@@ -193,5 +199,6 @@ struct ContentView: View {
     struct ContentView_Previews: PreviewProvider {
         static var previews: some View {
             ContentView()
+                .environmentObject(EventStore(preview: true))
         }
     }
