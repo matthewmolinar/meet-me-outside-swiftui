@@ -8,8 +8,18 @@
 import SwiftUI
 
 struct EventsCalendarView: View {
+    
+    
     var body: some View {
-        Text("Events Calendar")
+        NavigationStack {
+            ScrollView {
+                CalendarView(interval: DateInterval(start: .distantPast, end: .distantFuture))
+                
+            }
+                    .navigationTitle("Calendar")
+            
+            
+        }
     }
 }
 
