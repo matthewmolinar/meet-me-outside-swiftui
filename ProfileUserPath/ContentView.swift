@@ -83,8 +83,8 @@ struct ContentView: View {
                         
                         SettingsView()
                             .tabItem {
-                                Image(systemName: "megaphone.fill")
-                                Text("Notifications")
+                                Image(systemName: "lock.fill")
+                                Text("Settings")
                             }
                     }
                     

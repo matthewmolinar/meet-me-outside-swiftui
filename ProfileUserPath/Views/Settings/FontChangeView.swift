@@ -18,9 +18,17 @@ struct FontChangeView: View {
                 Spacer()
             }
             Button(action: {
-                globalFont.fontName = "AmericanTypewriter-Bold"
+                if globalFont.fontName == "DIN Alternate" {
+                    globalFont.fontName = "Arial-Narrow"
+                } else {
+                    globalFont.fontName = "DIN Alternate"
+                }
             }) {
-                Text("Change Font")
+                if globalFont.fontName == "DIN Alternate" {
+                    Text("Change Font to Arial Narrow")
+                } else {
+                    Text("Change Font to DIN Alternate")
+                }
             }
         }
     }
