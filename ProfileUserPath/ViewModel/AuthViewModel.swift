@@ -14,34 +14,34 @@ class AuthViewModel: ObservableObject {
     @Published var error: Error?
     @EnvironmentObject var viewModel: AuthViewModel
     @Published var user: User?
-    
+
     static let shared = AuthViewModel() // sharing view model property across the app
-    
-    
+
+
     init() {
         userSession = Auth.auth().currentUser
         fetchUser()
     }
-    
+
     func login(withEmail email:String, password: String) {
         Auth.auth().signIn(withEmail: email, password: password) { result, error in
             if let error = error {
                 print("Failed to login: \(error.localizedDescription)")
                 return
             }
-            
+
             self.userSession = result?.user
             self.fetchUser()
         }
     }
-    
+
     func registerUser(email: String, password: String, username: String, name: String, grade: String, age: String) {
         Auth.auth().createUser(withEmail: email, password: password) { result, error in
             if let error = error {
                 print("Error \(error.localizedDescription)")
                 return
             }
-            
+
             guard let user = result?.user else { return }
             let data = [
                 "email": email,
@@ -57,13 +57,13 @@ class AuthViewModel: ObservableObject {
             }
         }
     }
-    
+
     func signOut() {
         userSession = nil
         user = nil
         try? Auth.auth().signOut()
     }
-    
+
     func fetchUser() {
         guard let uid = userSession?.uid else { return }
         Firestore.firestore().collection("users").document(uid).getDocument { snapshot, _ in
