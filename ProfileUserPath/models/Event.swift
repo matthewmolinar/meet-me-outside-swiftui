@@ -33,6 +33,14 @@ struct Event: Identifiable {
     var date: Date
     var note: String
     var id: String
+    
+    var dateComponents: DateComponents {
+        var dateComponents = Calendar.current.dateComponents(
+            [.month, .day, .year, .hour, .minute], from: date)
+        dateComponents.timeZone = TimeZone.current
+        dateComponents.calendar = Calendar(identifier: .gregorian)
+        return dateComponents
+    }
 
     init(id: String = UUID().uuidString, eventType: EventType = .unspecified, date: Date, note: String) {
         self.eventType = eventType

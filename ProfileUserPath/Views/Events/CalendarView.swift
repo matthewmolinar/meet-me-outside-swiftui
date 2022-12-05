@@ -15,23 +15,53 @@ struct CalendarView: UIViewRepresentable {
     
     let interval: DateInterval
     @ObservedObject var eventStore: EventStore
+    @Binding var displayEvents: Bool
+    @Binding var dateSelected: DateComponents? 
     
     func makeUIView(context: Context) -> UICalendarView {
         let view = UICalendarView()
         view.delegate = context.coordinator
         view.calendar = Calendar(identifier: .gregorian)
         view.availableDateRange = interval
+        let dateSelection = UICalendarSelectionSingleDate(delegate: context.coordinator)
+        view.selectionBehavior = dateSelection
         return view
     }
     
     func updateUIView(_ uiView: UICalendarView, context: Context) {
-         
+        if let changedEvent = eventStore.changedEvent {
+            uiView.reloadDecorations(forDateComponents: [changedEvent.dateComponents], animated: true)
+            eventStore.changedEvent = nil
+        }
+        
+        if let movedEvent = eventStore.movedEvent {
+            uiView.reloadDecorations(forDateComponents: [movedEvent.dateComponents], animated: true)
+            eventStore.movedEvent = nil
+        }
     }
     
-    class Coordinator: NSObject, UICalendarViewDelegate {
+    class Coordinator: NSObject, UICalendarViewDelegate, UICalendarSelectionSingleDateDelegate {
+        func dateSelection(_ selection: UICalendarSelectionSingleDate, didSelectDate dateComponents: DateComponents?) {
+            parent.dateSelected = dateComponents
+            guard let dateComponents else { return }
+            
+            let currentEvents = eventStore.events
+                .filter { $0.date.startOfDay == dateComponents.date?.startOfDay }
+            if !currentEvents.isEmpty {
+                parent.displayEvents.toggle()
+            }
+            
+        }
+        
+        func dateSelection(_ selection: UICalendarSelectionSingleDate, canSelectDate dateComponents: DateComponents?) -> Bool {
+            // just lets us know if we can select this date or not, setting to true.
+            return true
+        }
+        
         // communicating between the calendar view and the coordinator
         var parent: CalendarView
         @ObservedObject var eventStore: EventStore
+        
         init(parent: CalendarView, eventStore: ObservedObject<EventStore>) {
             self.parent = parent
             self._eventStore = eventStore

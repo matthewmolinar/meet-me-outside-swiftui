@@ -56,6 +56,7 @@
 		BF2CA09A293D1CC200E0BAF8 /* EventFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2CA099293D1CC200E0BAF8 /* EventFormViewModel.swift */; };
 		BF2CA09D293D1D3700E0BAF8 /* ListViewRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2CA09C293D1D3700E0BAF8 /* ListViewRow.swift */; };
 		BF2CA09F293D229800E0BAF8 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2CA09E293D229800E0BAF8 /* CalendarView.swift */; };
+		BF2CA0A1293D293300E0BAF8 /* DaysEventsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2CA0A0293D293300E0BAF8 /* DaysEventsListView.swift */; };
 		BFD041C429349BB5001B727D /* NewMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD041C329349BB5001B727D /* NewMessageView.swift */; };
 		EA600AEC292E691200A7E224 /* ScannerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA600AEB292E691200A7E224 /* ScannerViewModel.swift */; };
 		EA600AEE292E692A00A7E224 /* ScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA600AED292E692A00A7E224 /* ScannerView.swift */; };
@@ -100,6 +101,7 @@
 		BF2CA099293D1CC200E0BAF8 /* EventFormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventFormViewModel.swift; sourceTree = "<group>"; };
 		BF2CA09C293D1D3700E0BAF8 /* ListViewRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewRow.swift; sourceTree = "<group>"; };
 		BF2CA09E293D229800E0BAF8 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
+		BF2CA0A0293D293300E0BAF8 /* DaysEventsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaysEventsListView.swift; sourceTree = "<group>"; };
 		BFD041C329349BB5001B727D /* NewMessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMessageView.swift; sourceTree = "<group>"; };
 		EA600AEB292E691200A7E224 /* ScannerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerViewModel.swift; sourceTree = "<group>"; };
 		EA600AED292E692A00A7E224 /* ScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerView.swift; sourceTree = "<group>"; };
@@ -254,6 +256,7 @@
 				BF2CA094293D1C6600E0BAF8 /* EditUpdateView */,
 				BF2CA090293D1BC400E0BAF8 /* EventsCalendarView.swift */,
 				BF2CA09E293D229800E0BAF8 /* CalendarView.swift */,
+				BF2CA0A0293D293300E0BAF8 /* DaysEventsListView.swift */,
 			);
 			path = Events;
 			sourceTree = "<group>";
@@ -377,6 +380,7 @@
 				EA600AF6292E6F5200A7E224 /* CameraPreview.swift in Sources */,
 				BF2869DA29341A73002EC628 /* MessageInputView.swift in Sources */,
 				BF2869D82934193C002EC628 /* SearchView.swift in Sources */,
+				BF2CA0A1293D293300E0BAF8 /* DaysEventsListView.swift in Sources */,
 				EA600AF4292E6DB200A7E224 /* QRImageGenerator.swift in Sources */,
 				BF2CA098293D1C9200E0BAF8 /* EventFormView.swift in Sources */,
 				BF2CA08C293D1AE800E0BAF8 /* Date+Extension.swift in Sources */,
