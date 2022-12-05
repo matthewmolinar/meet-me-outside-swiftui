@@ -8,6 +8,7 @@
 import SwiftUI
 import Firebase
 import FirebaseFirestore
+import Kingfisher
 
 struct RegistrationView: View {
     @State var email: String = ""
@@ -29,14 +30,29 @@ struct RegistrationView: View {
             
             {
                 ZStack {
-                    HStack {
-                        Image("batman")
-                            .resizable()
-                            .scaledToFill()
-                            .frame(width: 140, height: 140)
-                            .clipShape(Circle())
-                        Text("Upload your profile picture here")
+                    if let image = image, image.cgImage != nil {
+                        HStack {
+                            Image(uiImage: image)
+                                .resizable()
+                                .scaledToFill()
+                                .frame(width: 140, height: 140)
+                                .clipShape(Circle())
+                            Spacer()
+                            Text("Nice one!")
+                            Spacer()
+                        }
+                    } else {
+                        HStack {
+                            Image("batman")
+                                .resizable()
+                                .scaledToFill()
+                                .frame(width: 140, height: 140)
+                                .clipShape(Circle())
+                            Spacer()
+                            Text("Upload your profile picture here")
+                        }
                     }
+                    
                     
                 }
             }
