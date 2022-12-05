@@ -5,6 +5,8 @@ struct ProfileView: View {
     let user: User
     @State private var editProfileShowing = false
     @ObservedObject var viewModel: ProfileViewModel
+    @State private var formType: EventFormType?
+    @State var selectedFilter: FilterOptionsProfile = .events
     
     init(user: User) {
         self.user = user
@@ -20,8 +22,15 @@ struct ProfileView: View {
                 .padding()
             ProfileActionButtonView(editProfileShowing: $editProfileShowing)
             
+            FilterButtonView(selectedOption: $selectedFilter)
+            
             ScrollView {
-                Text("Ok!")
+                if selectedFilter == .events {
+                    ForEach(viewModel.userEvents) { event in
+                        ListViewRow(event: event, formType: $formType)
+                            .padding()
+                    }
+                }
                 }
             
         

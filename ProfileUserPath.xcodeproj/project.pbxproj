@@ -45,6 +45,7 @@
 		717200F1293E746000E9009F /* DeleteAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717200F0293E746000E9009F /* DeleteAccountView.swift */; };
 		717200F3293E76A600E9009F /* FontStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717200F2293E76A600E9009F /* FontStore.swift */; };
 		717200F5293E793000E9009F /* DarkModeStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717200F4293E793000E9009F /* DarkModeStore.swift */; };
+		717200F7293EAABA00E9009F /* ProfileFilterButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717200F6293EAABA00E9009F /* ProfileFilterButtons.swift */; };
 		71AE5870293DA10E004A17E3 /* EventsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71AE586F293DA10E004A17E3 /* EventsViewModel.swift */; };
 		71AE5872293DA294004A17E3 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71AE5871293DA294004A17E3 /* AuthViewModel.swift */; };
 		71AE5875293DD0E2004A17E3 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71AE5874293DD0E2004A17E3 /* ProfileView.swift */; };
@@ -114,6 +115,7 @@
 		717200F0293E746000E9009F /* DeleteAccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteAccountView.swift; sourceTree = "<group>"; };
 		717200F2293E76A600E9009F /* FontStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontStore.swift; sourceTree = "<group>"; };
 		717200F4293E793000E9009F /* DarkModeStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarkModeStore.swift; sourceTree = "<group>"; };
+		717200F6293EAABA00E9009F /* ProfileFilterButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileFilterButtons.swift; sourceTree = "<group>"; };
 		71AE586F293DA10E004A17E3 /* EventsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewModel.swift; sourceTree = "<group>"; };
 		71AE5871293DA294004A17E3 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		71AE5874293DD0E2004A17E3 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
@@ -300,6 +302,7 @@
 				71AE587B293DF227004A17E3 /* ProfileHeaderView.swift */,
 				71AE5881293DF476004A17E3 /* ProfileActionButtonView.swift */,
 				71AE5887293E24E0004A17E3 /* EditProfileView.swift */,
+				717200F6293EAABA00E9009F /* ProfileFilterButtons.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -514,6 +517,7 @@
 				EA600AF4292E6DB200A7E224 /* QRImageGenerator.swift in Sources */,
 				BF2CA098293D1C9200E0BAF8 /* EventFormView.swift in Sources */,
 				BF2CA08C293D1AE800E0BAF8 /* Date+Extension.swift in Sources */,
+				717200F7293EAABA00E9009F /* ProfileFilterButtons.swift in Sources */,
 				717200E7293E71C400E9009F /* FontChangeView.swift in Sources */,
 				BF2869DC29341B05002EC628 /* ChatView.swift in Sources */,
 				3E00373B292918A500CCBEE2 /* AppErrors.swift in Sources */,
