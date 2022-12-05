@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Kingfisher
 
 struct EditProfileView: View {
     @Binding var isShowing: Bool
@@ -21,7 +22,34 @@ struct EditProfileView: View {
     }
 
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            HStack {
+                Button(action: {}) {
+                    Text("Cancel")
+                }
+                Spacer()
+                Text("Edit Profile")
+                Spacer()
+                Button(action: {}) {
+                    Text("Done")
+                }
+            }.padding()
+            
+            VStack {
+                KFImage(URL(string: user.profilePictureUrl))
+                    .resizable()
+                    .scaledToFill()
+                    .clipShape(Circle())
+                    .frame(width: 120, height: 120)
+                
+                Button(action: {
+                    
+                }) {
+                    Text("Change your profile photo")
+                }
+            }
+            
+        }
     }
 }
 
