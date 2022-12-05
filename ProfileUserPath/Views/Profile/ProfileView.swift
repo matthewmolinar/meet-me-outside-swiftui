@@ -3,6 +3,7 @@ import SwiftUI
 
 struct ProfileView: View {
     let user: User
+    @State private var editProfileShowing = false
     
     @ObservedObject var viewModel: ProfileViewModel
     
@@ -17,7 +18,7 @@ struct ProfileView: View {
         VStack {
             ProfileHeaderView(viewModel: viewModel)
                 .padding()
-            ProfileActionButtonView()
+            ProfileActionButtonView(editProfileShowing: $editProfileShowing)
             
             ScrollView {
                 Text("Ok!")
