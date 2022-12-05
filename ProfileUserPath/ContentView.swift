@@ -81,7 +81,7 @@ struct ContentView: View {
                                 Text("Events")
                             }
                         
-                        NotificationsView()
+                        SettingsView()
                             .tabItem {
                                 Image(systemName: "megaphone.fill")
                                 Text("Notifications")

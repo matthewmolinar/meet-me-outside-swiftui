@@ -35,6 +35,14 @@
 		3EC5F60B29292272008FF7C5 /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 3EC5F60A29292272008FF7C5 /* FirebaseStorageCombine-Community */; };
 		3EC5F60F292D83EF008FF7C5 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EC5F60E292D83EF008FF7C5 /* LoginView.swift */; };
 		3EC5F613292E7927008FF7C5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3EC5F612292E7927008FF7C5 /* GoogleService-Info.plist */; };
+		717200E2293E68EB00E9009F /* ConfettiSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 717200E1293E68EB00E9009F /* ConfettiSwiftUI */; };
+		717200E5293E6DB100E9009F /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717200E4293E6DB100E9009F /* SettingsView.swift */; };
+		717200E7293E71C400E9009F /* FontChangeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717200E6293E71C400E9009F /* FontChangeView.swift */; };
+		717200E9293E71D500E9009F /* SettingRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717200E8293E71D500E9009F /* SettingRowView.swift */; };
+		717200EB293E733500E9009F /* DarkModeToggleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717200EA293E733500E9009F /* DarkModeToggleView.swift */; };
+		717200ED293E73B100E9009F /* ColorSchemeChangeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717200EC293E73B100E9009F /* ColorSchemeChangeView.swift */; };
+		717200EF293E745200E9009F /* PasswordChangeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717200EE293E745200E9009F /* PasswordChangeView.swift */; };
+		717200F1293E746000E9009F /* DeleteAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717200F0293E746000E9009F /* DeleteAccountView.swift */; };
 		71AE5870293DA10E004A17E3 /* EventsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71AE586F293DA10E004A17E3 /* EventsViewModel.swift */; };
 		71AE5872293DA294004A17E3 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71AE5871293DA294004A17E3 /* AuthViewModel.swift */; };
 		71AE5875293DD0E2004A17E3 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71AE5874293DD0E2004A17E3 /* ProfileView.swift */; };
@@ -95,6 +103,13 @@
 		3E00373A292918A500CCBEE2 /* AppErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppErrors.swift; sourceTree = "<group>"; };
 		3EC5F60E292D83EF008FF7C5 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		3EC5F612292E7927008FF7C5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		717200E4293E6DB100E9009F /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		717200E6293E71C400E9009F /* FontChangeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontChangeView.swift; sourceTree = "<group>"; };
+		717200E8293E71D500E9009F /* SettingRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingRowView.swift; sourceTree = "<group>"; };
+		717200EA293E733500E9009F /* DarkModeToggleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarkModeToggleView.swift; sourceTree = "<group>"; };
+		717200EC293E73B100E9009F /* ColorSchemeChangeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSchemeChangeView.swift; sourceTree = "<group>"; };
+		717200EE293E745200E9009F /* PasswordChangeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordChangeView.swift; sourceTree = "<group>"; };
+		717200F0293E746000E9009F /* DeleteAccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteAccountView.swift; sourceTree = "<group>"; };
 		71AE586F293DA10E004A17E3 /* EventsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewModel.swift; sourceTree = "<group>"; };
 		71AE5871293DA294004A17E3 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		71AE5874293DD0E2004A17E3 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
@@ -154,6 +169,7 @@
 				3EC5F60129292272008FF7C5 /* FirebaseFirestoreSwift in Frameworks */,
 				BF2CA0A4293D8F4400E0BAF8 /* Kingfisher in Frameworks */,
 				3EC5F5F729292272008FF7C5 /* FirebaseAuthCombine-Community in Frameworks */,
+				717200E2293E68EB00E9009F /* ConfettiSwiftUI in Frameworks */,
 				3EC5F5ED29292272008FF7C5 /* FirebaseAnalyticsSwift in Frameworks */,
 				3EC5F60B29292272008FF7C5 /* FirebaseStorageCombine-Community in Frameworks */,
 				3EC5F5EF29292272008FF7C5 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */,
@@ -242,6 +258,20 @@
 			path = errors;
 			sourceTree = "<group>";
 		};
+		717200E3293E6DA600E9009F /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				717200E4293E6DB100E9009F /* SettingsView.swift */,
+				717200E6293E71C400E9009F /* FontChangeView.swift */,
+				717200E8293E71D500E9009F /* SettingRowView.swift */,
+				717200EA293E733500E9009F /* DarkModeToggleView.swift */,
+				717200EC293E73B100E9009F /* ColorSchemeChangeView.swift */,
+				717200EE293E745200E9009F /* PasswordChangeView.swift */,
+				717200F0293E746000E9009F /* DeleteAccountView.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
 		71AE586C293D9C00004A17E3 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -297,6 +327,7 @@
 		BF2869D1293412AA002EC628 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				717200E3293E6DA600E9009F /* Settings */,
 				71AE5884293E1A6B004A17E3 /* Search */,
 				71AE5883293E19DE004A17E3 /* Notifications */,
 				71AE5873293DD0D8004A17E3 /* Profile */,
@@ -401,6 +432,7 @@
 				3EC5F60829292272008FF7C5 /* FirebaseStorage */,
 				3EC5F60A29292272008FF7C5 /* FirebaseStorageCombine-Community */,
 				BF2CA0A3293D8F4400E0BAF8 /* Kingfisher */,
+				717200E1293E68EB00E9009F /* ConfettiSwiftUI */,
 			);
 			productName = ProfileUserPath;
 			productReference = 3E0036D9291C602200CCBEE2 /* ProfileUserPath.app */;
@@ -434,6 +466,7 @@
 				3E003736292915BB00CCBEE2 /* XCRemoteSwiftPackageReference "PromiseKit" */,
 				3EC5F5E729292272008FF7C5 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				BF2CA0A2293D8F4300E0BAF8 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				717200E0293E68EB00E9009F /* XCRemoteSwiftPackageReference "ConfettiSwiftUI" */,
 			);
 			productRefGroup = 3E0036DA291C602200CCBEE2 /* Products */;
 			projectDirPath = "";
@@ -463,6 +496,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BFD041C429349BB5001B727D /* NewMessageView.swift in Sources */,
+				717200EF293E745200E9009F /* PasswordChangeView.swift in Sources */,
 				EA600AF6292E6F5200A7E224 /* CameraPreview.swift in Sources */,
 				71AE587A293DEA4B004A17E3 /* index.swift in Sources */,
 				BF2869DA29341A73002EC628 /* MessageInputView.swift in Sources */,
@@ -473,6 +507,7 @@
 				EA600AF4292E6DB200A7E224 /* QRImageGenerator.swift in Sources */,
 				BF2CA098293D1C9200E0BAF8 /* EventFormView.swift in Sources */,
 				BF2CA08C293D1AE800E0BAF8 /* Date+Extension.swift in Sources */,
+				717200E7293E71C400E9009F /* FontChangeView.swift in Sources */,
 				BF2869DC29341B05002EC628 /* ChatView.swift in Sources */,
 				3E00373B292918A500CCBEE2 /* AppErrors.swift in Sources */,
 				BF2CA09F293D229800E0BAF8 /* CalendarView.swift in Sources */,
@@ -485,6 +520,7 @@
 				BF2CA087293D183500E0BAF8 /* EventStore.swift in Sources */,
 				EA600AF8292E6F6B00A7E224 /* QRScannerView.swift in Sources */,
 				EA890395292E6166008C8A81 /* CameraView.swift in Sources */,
+				717200E9293E71D500E9009F /* SettingRowView.swift in Sources */,
 				71AE5892293E3BB8004A17E3 /* NotificationsView.swift in Sources */,
 				BF2869D629341300002EC628 /* ConversationCell.swift in Sources */,
 				BF2869E229345721002EC628 /* MessageView.swift in Sources */,
@@ -497,8 +533,10 @@
 				3E0036DF291C602200CCBEE2 /* ContentView.swift in Sources */,
 				BF2CA089293D19F800E0BAF8 /* Event.swift in Sources */,
 				BF2869DE29345034002EC628 /* ChatBubble.swift in Sources */,
+				717200F1293E746000E9009F /* DeleteAccountView.swift in Sources */,
 				71AE5870293DA10E004A17E3 /* EventsViewModel.swift in Sources */,
 				71AE5886293E21E6004A17E3 /* ProfielViewModel.swift in Sources */,
+				717200EB293E733500E9009F /* DarkModeToggleView.swift in Sources */,
 				EA890393292E5975008C8A81 /* FirebaseImage.swift in Sources */,
 				BF2869E0293453DD002EC628 /* Message.swift in Sources */,
 				BF2869D4293412EC002EC628 /* ConservationsView.swift in Sources */,
@@ -510,9 +548,11 @@
 				BF2CA091293D1BC400E0BAF8 /* EventsCalendarView.swift in Sources */,
 				BF2CA09D293D1D3700E0BAF8 /* ListViewRow.swift in Sources */,
 				EA890391292E592A008C8A81 /* ImageLoader.swift in Sources */,
+				717200E5293E6DB100E9009F /* SettingsView.swift in Sources */,
 				71AE588E293E2CD8004A17E3 /* SearchViewModel.swift in Sources */,
 				3E0036DD291C602200CCBEE2 /* ProfileUserPathApp.swift in Sources */,
 				BF2CA096293D1C7C00E0BAF8 /* EventFormType.swift in Sources */,
+				717200ED293E73B100E9009F /* ColorSchemeChangeView.swift in Sources */,
 				BF2CA09A293D1CC200E0BAF8 /* EventFormViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -734,6 +774,14 @@
 				kind = branch;
 			};
 		};
+		717200E0293E68EB00E9009F /* XCRemoteSwiftPackageReference "ConfettiSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/simibac/ConfettiSwiftUI.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 		BF2CA0A2293D8F4300E0BAF8 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
@@ -839,6 +887,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 3EC5F5E729292272008FF7C5 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = "FirebaseStorageCombine-Community";
+		};
+		717200E1293E68EB00E9009F /* ConfettiSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 717200E0293E68EB00E9009F /* XCRemoteSwiftPackageReference "ConfettiSwiftUI" */;
+			productName = ConfettiSwiftUI;
 		};
 		BF2CA0A3293D8F4400E0BAF8 /* Kingfisher */ = {
 			isa = XCSwiftPackageProductDependency;

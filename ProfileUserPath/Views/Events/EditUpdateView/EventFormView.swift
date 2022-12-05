@@ -7,12 +7,15 @@
 import Foundation
 import SwiftUI
 import Firebase
+import ConfettiSwiftUI
+
 
 struct EventFormView: View {
     @EnvironmentObject var eventStore: EventStore
     @StateObject var viewModel: EventFormViewModel
     @Environment(\.dismiss) var dismiss
     @FocusState private var focus: Bool?
+    @State private var counter: Int = 0
     
     var body: some View {
         NavigationStack {
@@ -61,15 +64,18 @@ struct EventFormView: View {
                                 ]
                                 
                                 docRef.setData(data) { _ in
+                                    counter += 1
                                     print("DEBUG: uploaded event")
                                 }
                             }
-                            dismiss()
+//                            dismiss()
                         } label: {
                             Text(viewModel.updating ? "Update Event" : "Add Event")
                         }
                         .buttonStyle(.borderedProminent)
                         .disabled(viewModel.incomplete)
+                        .confettiCannon(counter: $counter)
+
                         Spacer()
                     }
                     ) {
@@ -77,7 +83,7 @@ struct EventFormView: View {
                     }
                 }
             }
-            .navigationTitle(viewModel.updating ? "Update" : "New Event")
+            .navigationTitle(viewModel.updating ? "Edit Event" : "New Event")
             .onAppear {
                 focus = true
             }

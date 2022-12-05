@@ -26,6 +26,7 @@ struct ProfileUserPathApp: App {
         WindowGroup {
             ContentView().environmentObject(userEvents)
                 .environmentObject(AuthViewModel.shared)
+                .font(Font.custom("DIN Alternate", size: 20))
         }
     }
 }

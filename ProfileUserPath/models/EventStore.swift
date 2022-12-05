@@ -15,6 +15,7 @@ class EventStore: ObservableObject {
     @Published var preview: Bool
     @Published var changedEvent: Event?
     @Published var movedEvent: Event?
+ 
 
     init(preview: Bool = false) {
         self.preview = preview
