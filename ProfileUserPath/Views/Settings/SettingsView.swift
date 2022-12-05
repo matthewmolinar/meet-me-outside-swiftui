@@ -24,7 +24,7 @@ struct SettingsView: View {
                     NavigationLink(destination: FontChangeView()) {
                         SettingRowView(title: "Fonts", systemImageName: "textformat")
                     }
-                    NavigationLink(destination: FontChangeView()) {
+                    NavigationLink(destination: DarkModeToggleView()) {
                         SettingRowView(title: "Dark Mode", systemImageName: "circle.lefthalf.filled")
                     }
                     NavigationLink(destination: ColorSchemeChangeView()) {
