@@ -8,13 +8,26 @@
 import SwiftUI
 
 struct DarkModeToggleView: View {
+    @EnvironmentObject var darkModeConfig: DarkModeStore
+    @State var darkModeIsOn = false
+
+    
     var body: some View {
-        Text("Toggle Dark Mode")
+        VStack {
+            
+            Toggle("Dark mode", isOn: $darkModeIsOn)
+                .onChange(of: darkModeIsOn) { value in
+                    if darkModeIsOn {
+                        darkModeConfig.colorSchemeProperty = .dark
+
+                    } else {
+                        darkModeConfig.colorSchemeProperty = .light
+
+                        }
+                    }
+                .toggleStyle(SwitchToggleStyle(tint: .green))
+            Spacer()
+        }.padding()
     }
 }
 
-struct DarkModeToggleView_Previews: PreviewProvider {
-    static var previews: some View {
-        DarkModeToggleView()
-    }
-}

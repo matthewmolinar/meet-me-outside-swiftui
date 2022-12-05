@@ -44,6 +44,7 @@
 		717200EF293E745200E9009F /* PasswordChangeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717200EE293E745200E9009F /* PasswordChangeView.swift */; };
 		717200F1293E746000E9009F /* DeleteAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717200F0293E746000E9009F /* DeleteAccountView.swift */; };
 		717200F3293E76A600E9009F /* FontStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717200F2293E76A600E9009F /* FontStore.swift */; };
+		717200F5293E793000E9009F /* DarkModeStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717200F4293E793000E9009F /* DarkModeStore.swift */; };
 		71AE5870293DA10E004A17E3 /* EventsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71AE586F293DA10E004A17E3 /* EventsViewModel.swift */; };
 		71AE5872293DA294004A17E3 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71AE5871293DA294004A17E3 /* AuthViewModel.swift */; };
 		71AE5875293DD0E2004A17E3 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71AE5874293DD0E2004A17E3 /* ProfileView.swift */; };
@@ -112,6 +113,7 @@
 		717200EE293E745200E9009F /* PasswordChangeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordChangeView.swift; sourceTree = "<group>"; };
 		717200F0293E746000E9009F /* DeleteAccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteAccountView.swift; sourceTree = "<group>"; };
 		717200F2293E76A600E9009F /* FontStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontStore.swift; sourceTree = "<group>"; };
+		717200F4293E793000E9009F /* DarkModeStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarkModeStore.swift; sourceTree = "<group>"; };
 		71AE586F293DA10E004A17E3 /* EventsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewModel.swift; sourceTree = "<group>"; };
 		71AE5871293DA294004A17E3 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		71AE5874293DD0E2004A17E3 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
@@ -249,6 +251,7 @@
 				BF2CA086293D183500E0BAF8 /* EventStore.swift */,
 				BF2CA088293D19F800E0BAF8 /* Event.swift */,
 				717200F2293E76A600E9009F /* FontStore.swift */,
+				717200F4293E793000E9009F /* DarkModeStore.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -500,6 +503,7 @@
 			files = (
 				BFD041C429349BB5001B727D /* NewMessageView.swift in Sources */,
 				717200EF293E745200E9009F /* PasswordChangeView.swift in Sources */,
+				717200F5293E793000E9009F /* DarkModeStore.swift in Sources */,
 				EA600AF6292E6F5200A7E224 /* CameraPreview.swift in Sources */,
 				71AE587A293DEA4B004A17E3 /* index.swift in Sources */,
 				BF2869DA29341A73002EC628 /* MessageInputView.swift in Sources */,
