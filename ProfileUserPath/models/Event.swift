@@ -6,8 +6,8 @@
 //
 import Foundation
 
-struct Event: Identifiable {
-    enum EventType: String, Identifiable, CaseIterable {
+struct Event: Identifiable, Codable {
+    enum EventType: String, Identifiable, CaseIterable, Codable {
         case work, home, social, sport, unspecified
         var id: String {
             self.rawValue

@@ -6,6 +6,7 @@
 //
 import Foundation
 import SwiftUI
+import Firebase
 
 struct EventFormView: View {
     @EnvironmentObject var eventStore: EventStore
@@ -45,7 +46,6 @@ struct EventFormView: View {
                                     let encodedEvent = try jsonEncoder.encode(event)
                                     let encodedStringEvent = String(data: encodedEvent, encoding: .utf8)!
                                     // push update to firebase.
-                                    
                                 } catch {
                                     print(error.localizedDescription)
                                 }

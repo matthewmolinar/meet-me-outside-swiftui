@@ -12,9 +12,7 @@ class EventsViewModel: ObservableObject {
     @Published var events = [Event]()
     
     init() {
-        fetchEvents() {
-            return nil
-≈        }
+        fetchEvents()
     }
     
     func fetchEvents() {
@@ -27,7 +25,8 @@ class EventsViewModel: ObservableObject {
             
             changes.forEach { change in
                 let data = change.document.data()
-                self.events.append(Event(dictionary: data))
+                // construct an Event object
+//                self.events.append(Event(dictionary: data))
             }
         }
         
