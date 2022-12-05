@@ -69,7 +69,7 @@ struct ContentView: View {
                         
                         
                         // Third tab TODO: Calendar
-                        EventsCalendarView(eventStore: _userEvents)
+                        EventsCalendarView()
                             .tabItem {
                                 Image(systemName: "calendar.circle.fill")
                                 Text("Calendar")
