@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Firebase
 
 class EventFormViewModel: ObservableObject {
     @Published var date = Date()
@@ -26,5 +27,19 @@ class EventFormViewModel: ObservableObject {
 
     var incomplete: Bool {
         note.isEmpty
+    }
+    
+    func uploadEvent(date: Date, note: String) {
+        guard let user = AuthViewModel.shared.user else { return }
+        let docRef = Firestore.firestore().collection("events").document()
+        
+        let data: [String: Any] = [
+            "uid": user.id, "date": "TEST", "note": note
+        ]
+        
+        docRef.setData(data) { _ in
+            print("DEBUG: uploaded event")
+        }
+        
     }
 }
