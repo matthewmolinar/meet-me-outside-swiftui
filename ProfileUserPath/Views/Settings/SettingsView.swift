@@ -8,18 +8,11 @@
 import SwiftUI
 
 struct SettingsView: View {
+    @State var showDeleteAccountAlert = false
     var body: some View {
         VStack {
             List {
-                Section(header: Text("Account")) {
-                    NavigationLink(destination: PasswordChangeView()) {
-                        SettingRowView(title: "Password", systemImageName: "lock")
-                    }
-                    NavigationLink(destination: DeleteAccountView()) {
-                        SettingRowView(title: "Delete Account", systemImageName: "trash.fill")
-                    }
-                    
-                }
+                
                 Section(header: Text("Appearance")) {
                     NavigationLink(destination: FontChangeView()) {
                         SettingRowView(title: "Fonts", systemImageName: "textformat")
@@ -27,9 +20,26 @@ struct SettingsView: View {
                     NavigationLink(destination: DarkModeToggleView()) {
                         SettingRowView(title: "Dark Mode", systemImageName: "circle.lefthalf.filled")
                     }
-                    NavigationLink(destination: ColorSchemeChangeView()) {
-                        SettingRowView(title: "Color Scheme", systemImageName: "paintbrush.pointed.fill")
+                    
+                }
+                
+                Section(header: Text("Account")) {
+                    Button(action: {
+                        showDeleteAccountAlert.toggle()
+                    }) {
+                        SettingRowView(title: "Delete Account", systemImageName: "trash.fill")
+                    
+                        .foregroundColor(.red)
                     }
+                    .alert(isPresented: $showDeleteAccountAlert) {
+                        Alert(title: Text("Are you sure you want to delete your account?"), message: Text("This action cannot be undone."), primaryButton: .default(Text("Cancel"), action: {}), secondaryButton: .destructive(Text("Delete Account"), action: {
+                            // delete account
+                            AuthViewModel.shared.userSession?.delete()
+                            AuthViewModel.shared.userSession = nil
+                        }))
+                    }
+                        
+                    
                 }
                 
             }
