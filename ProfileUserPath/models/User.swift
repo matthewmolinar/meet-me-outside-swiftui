@@ -7,24 +7,27 @@
 
 import Foundation
 
-public struct User: Codable {
+struct User: Identifiable {
+    let id: String
+    
     let name: String
+    let username: String
     let age: String
     let grade: String
-    let profilePicture: String
+    let profilePictureUrl: String
     let profileDescription: String
     
     
-    enum CodingKeys: String, CodingKey {
-        case name
-        case age
-        case grade
-        case profilePicture
-        case profileDescription
-    }
     
-    var dictionary: [String: Any] {
-         let data = (try? JSONEncoder().encode(self)) ?? Data()
-         return (try? JSONSerialization.jsonObject(with: data, options: .mutableContainers) as? [String: Any]) ?? [:]
-     }
+    
+    init(dictionary: [String: Any]) {
+        self.id = dictionary["uid"] as? String ?? ""
+        self.name = dictionary["name"] as? String ?? ""
+        self.username = dictionary["username"] as? String ?? ""
+        self.age = dictionary["age"] as? String ?? ""
+        self.grade = dictionary["grade"] as? String ?? ""
+        self.profilePictureUrl = dictionary["profilePictureUrl"] as? String ?? ""
+        self.profileDescription = dictionary["profileDescription"] as? String ?? ""
+        
+    }
 }
