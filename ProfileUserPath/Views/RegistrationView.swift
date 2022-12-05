@@ -71,7 +71,9 @@ struct RegistrationView: View {
                 
                 
             }
+            
         }
+        .navigationTitle("Register")
     }
     
     
