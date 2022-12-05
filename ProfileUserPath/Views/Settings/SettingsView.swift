@@ -69,7 +69,11 @@ struct SettingsView: View {
                         let request = UNNotificationRequest(identifier: "swaggggg", content: content,
                            trigger:trigger)
 
-                        UNUserNotificationCenter.current().add(request)
+                        center.add(request) { error in
+                            if let error = error {
+                                print("\(error.localizedDescription)")
+                            }
+                        }
                     } ){
                         SettingRowView(title: "Allow Notifications", systemImageName: "exclamationmark.bubble")
                     }
