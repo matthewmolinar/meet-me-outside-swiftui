@@ -36,6 +36,8 @@
 		3EC5F60B29292272008FF7C5 /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 3EC5F60A29292272008FF7C5 /* FirebaseStorageCombine-Community */; };
 		3EC5F60F292D83EF008FF7C5 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EC5F60E292D83EF008FF7C5 /* LoginView.swift */; };
 		3EC5F613292E7927008FF7C5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3EC5F612292E7927008FF7C5 /* GoogleService-Info.plist */; };
+		71AE5870293DA10E004A17E3 /* EventsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71AE586F293DA10E004A17E3 /* EventsViewModel.swift */; };
+		71AE5872293DA294004A17E3 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71AE5871293DA294004A17E3 /* AuthViewModel.swift */; };
 		BF2869D4293412EC002EC628 /* ConservationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2869D3293412EC002EC628 /* ConservationsView.swift */; };
 		BF2869D629341300002EC628 /* ConversationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2869D529341300002EC628 /* ConversationCell.swift */; };
 		BF2869D82934193C002EC628 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2869D72934193C002EC628 /* SearchView.swift */; };
@@ -82,6 +84,8 @@
 		3E00373A292918A500CCBEE2 /* AppErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppErrors.swift; sourceTree = "<group>"; };
 		3EC5F60E292D83EF008FF7C5 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		3EC5F612292E7927008FF7C5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		71AE586F293DA10E004A17E3 /* EventsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewModel.swift; sourceTree = "<group>"; };
+		71AE5871293DA294004A17E3 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		BF2869D3293412EC002EC628 /* ConservationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConservationsView.swift; sourceTree = "<group>"; };
 		BF2869D529341300002EC628 /* ConversationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationCell.swift; sourceTree = "<group>"; };
 		BF2869D72934193C002EC628 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
@@ -165,6 +169,7 @@
 		3E0036DB291C602200CCBEE2 /* ProfileUserPath */ = {
 			isa = PBXGroup;
 			children = (
+				71AE586C293D9C00004A17E3 /* ViewModel */,
 				BF2CA08A293D1AC300E0BAF8 /* Extensions */,
 				3EC5F612292E7927008FF7C5 /* GoogleService-Info.plist */,
 				3E0037392929188900CCBEE2 /* errors */,
@@ -211,6 +216,15 @@
 				3E00373A292918A500CCBEE2 /* AppErrors.swift */,
 			);
 			path = errors;
+			sourceTree = "<group>";
+		};
+		71AE586C293D9C00004A17E3 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				71AE586F293DA10E004A17E3 /* EventsViewModel.swift */,
+				71AE5871293DA294004A17E3 /* AuthViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		BF2869D1293412AA002EC628 /* Views */ = {
@@ -400,6 +414,7 @@
 				BF2869D629341300002EC628 /* ConversationCell.swift in Sources */,
 				BF2869E229345721002EC628 /* MessageView.swift in Sources */,
 				BF2869E629345A0C002EC628 /* SearchBar.swift in Sources */,
+				71AE5872293DA294004A17E3 /* AuthViewModel.swift in Sources */,
 				BF2CA08E293D1BAE00E0BAF8 /* EventsListView.swift in Sources */,
 				BF2869E4293458A6002EC628 /* UserCell.swift in Sources */,
 				EA600AF0292E694200A7E224 /* QrCodeCameraDelegate.swift in Sources */,
@@ -407,6 +422,7 @@
 				BF2CA089293D19F800E0BAF8 /* Event.swift in Sources */,
 				3E0036EB291DAFCC00CCBEE2 /* ProfileCreate.swift in Sources */,
 				BF2869DE29345034002EC628 /* ChatBubble.swift in Sources */,
+				71AE5870293DA10E004A17E3 /* EventsViewModel.swift in Sources */,
 				EA890393292E5975008C8A81 /* FirebaseImage.swift in Sources */,
 				BF2869E0293453DD002EC628 /* Message.swift in Sources */,
 				BF2869D4293412EC002EC628 /* ConservationsView.swift in Sources */,

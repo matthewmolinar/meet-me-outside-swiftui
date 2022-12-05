@@ -41,6 +41,10 @@ struct Event: Identifiable {
         dateComponents.calendar = Calendar(identifier: .gregorian)
         return dateComponents
     }
+    
+//    init(dictionary: [String: Any]) {
+//
+//    }
 
     init(id: String = UUID().uuidString, eventType: EventType = .unspecified, date: Date, note: String) {
         self.eventType = eventType
