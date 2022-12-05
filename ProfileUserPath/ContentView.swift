@@ -13,7 +13,7 @@ import Kingfisher
 
 struct ContentView: View {
     @EnvironmentObject var userEvents: EventStore
-//    @EnvironmentObject var viewModel: AuthViewModel
+    @EnvironmentObject var viewModel: AuthViewModel
     @State var user: User? = nil
     @State var showSheet = false
     @State var loading: Bool = false
@@ -22,7 +22,6 @@ struct ContentView: View {
     @State var alertMessage: String = ""
     @State var showQRScanner: Bool = false
     @State var qRImageGenerator = QRImageGenerator(message: "Not Set")
-    @EnvironmentObject var viewModel: AuthViewModel
     
     let fakeData = ["email": "fake@email.com",
                     "username": "error",
@@ -43,7 +42,7 @@ struct ContentView: View {
                 NavigationView {
                     
                     TabView {
-                        ProfileView()
+                        ProfileView(user: viewModel.user ?? User(dictionary: fakeData))
                         .tabItem {
                             Image(systemName: "person.circle")
                             Text("Profile")
@@ -101,5 +100,6 @@ struct ContentView: View {
         static var previews: some View {
             ContentView()
                 .environmentObject(EventStore(preview: true))
+                .environmentObject(AuthViewModel())
         }
     }

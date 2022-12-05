@@ -2,6 +2,7 @@ import SwiftUI
 
 
 struct ProfileView: View {
+    let user: User
     
 
     
@@ -14,13 +15,8 @@ struct ProfileView: View {
             ScrollView {
                 Text("Ok!")
                 }
+            .navigationTitle(user.name)
             }
         }
     }
-
-struct ProfileView_Previews: PreviewProvider {
-    static var previews: some View {
-        ProfileView()
-    }
-}
 

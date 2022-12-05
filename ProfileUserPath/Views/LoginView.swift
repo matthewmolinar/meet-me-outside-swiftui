@@ -11,6 +11,7 @@ import FirebaseFirestore
 struct LoginView: View {
     @State var email: String = ""
     @State var password: String = ""
+    @EnvironmentObject var viewModel: AuthViewModel
     
     var body: some View {
         NavigationView {
@@ -18,14 +19,9 @@ struct LoginView: View {
                 Form {
                     Section {
                         TextField("Email", text: $email)
-                        TextField("Password", text: $password)
+                        SecureField("Password", text: $password)
                         Button("Sign In") {
-                            Auth.auth().signIn(withEmail: email, password: password) { result, error in
-                                if let error = error {
-                                    print("DEBUG: failed to login \(error.localizedDescription)")
-                                    return
-                                }
-                            }
+                            viewModel.login(withEmail: email, password: password)
                         }
                     }
                 }

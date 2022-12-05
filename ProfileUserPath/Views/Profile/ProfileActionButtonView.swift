@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ProfileActionButtonView: View {
+    @EnvironmentObject var viewModel: AuthViewModel
     var body: some View {
         HStack {
             Button(action: {}) {
@@ -18,7 +19,9 @@ struct ProfileActionButtonView: View {
             }
             .cornerRadius(20)
             
-            Button(action: {}) {
+            Button(action: {
+                viewModel.signOut()
+            }) {
                 Text("Sign Out")
                     .frame(width: 180, height: 40)
                     .background(Color.green)

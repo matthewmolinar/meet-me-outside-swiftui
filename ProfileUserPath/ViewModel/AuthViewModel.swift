@@ -35,7 +35,7 @@ class AuthViewModel: ObservableObject {
         }
     }
 
-    func registerUser(email: String, password: String, username: String, name: String, grade: String, age: String) {
+    func registerUser(email: String, password: String) {
         Auth.auth().createUser(withEmail: email, password: password) { result, error in
             if let error = error {
                 print("Error \(error.localizedDescription)")
@@ -45,10 +45,11 @@ class AuthViewModel: ObservableObject {
             guard let user = result?.user else { return }
             let data = [
                 "email": email,
-                "username": username.lowercased(),
-                "name": name,
-                "age": age,
-                "uid": user.uid
+                "name": "Joe Doe",
+                "age": "-",
+                "grade": "-",
+                "profilePicture": "cM5APPYlLEThu3QbBAxP2ffQmSq1.png",
+                "profileDescription": "Go Write your Profile Description!"
             ]
             Firestore.firestore().collection("users").document(user.uid).setData(data) { _ in
                 print("uploading user data...")
