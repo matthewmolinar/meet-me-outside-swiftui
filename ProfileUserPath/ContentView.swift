@@ -39,56 +39,60 @@ struct ContentView: View {
     var body: some View {
         Group {
             if (viewModel.userSession != nil) {
-                NavigationView {
+                ZStack {
                     
-                    TabView {
-                        ProfileView(user: viewModel.user ?? User(dictionary: fakeData))
-                        .tabItem {
-                            Image(systemName: "person.circle")
-                            Text("Profile")
-                        }
+                    NavigationView {
                         
-                        .navigationTitle("Your Profile")
-//                        .toolbar {
-//                                ToolbarItemGroup(placement: .navigationBarTrailing) {
-//                                    NavigationLink(destination: ProfileCreate()) {
-//                                        Text("Edit Profile")
-//                                    }
-//                                }
-                                
-                                
+                        TabView {
+                            ProfileView(user: viewModel.user ?? User(dictionary: fakeData))
+                            
+                            .tabItem {
+                                Image(systemName: "person.circle")
+                                Text("Profile")
+                                    
+                            }
+                            
+                            .navigationTitle("Your Profile")
+                            
+                                    
+                                    
 
-                        
-                        // Second tab
-                        ConservationsView()
-                            .tabItem {
-                                Image(systemName: "message")
-                                Text("Groups")
-                            }
-                        
-                        
-                        
-                        // Third tab TODO: Calendar
-                        EventsCalendarView()
-                            .tabItem {
-                                Image(systemName: "calendar.circle.fill")
-                                Text("Calendar")
-                            }
-                        
-                        EventsListView()
-                            .tabItem {
-                                Image(systemName: "list.triangle")
-                                Text("Events")
-                            }
-                        
-                        SettingsView()
-                            .tabItem {
-                                Image(systemName: "lock.fill")
-                                Text("Settings")
-                            }
+                            
+                            // Second tab
+                            ConservationsView()
+                                .tabItem {
+                                    Image(systemName: "message")
+                                    Text("Groups")
+                                }
+                            
+                            
+                            
+                            // Third tab TODO: Calendar
+                            EventsCalendarView()
+                                .tabItem {
+                                    Image(systemName: "calendar.circle.fill")
+                                    Text("Calendar")
+                                }
+                            
+                            EventsListView()
+                                .tabItem {
+                                    Image(systemName: "list.triangle")
+                                    Text("Events")
+                                }
+                            
+                            SettingsView()
+                                .tabItem {
+                                    Image(systemName: "lock.fill")
+                                    Text("Settings")
+                                }
+                        }
+                        .navigationBarItems(leading: NavigationLink(destination: ScannerView()) {
+                            Text("QR Code")
+                        }
+                                            )
                     }
-                    
                 }
+                
             } else {
                 LoginView()
             }

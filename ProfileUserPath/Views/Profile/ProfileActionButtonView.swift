@@ -24,7 +24,7 @@ struct ProfileActionButtonView: View {
                 editProfileShowing.toggle()
             }) {
                 Text("Edit Profile")
-                    .frame(width: 180, height: 40)
+                    .frame(width: 120, height: 40)
                     .background(Color.green)
                     .foregroundColor(.white)
             }
@@ -37,11 +37,13 @@ struct ProfileActionButtonView: View {
                 viewModel.signOut()
             }) {
                 Text("Sign Out")
-                    .frame(width: 180, height: 40)
+                    .frame(width: 120, height: 40)
                     .background(Color.green)
                     .foregroundColor(.white)
             }
             .cornerRadius(20)
+            
+            
         }
     }
 }

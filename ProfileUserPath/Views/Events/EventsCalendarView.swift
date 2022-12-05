@@ -6,6 +6,8 @@
 //
 
 import SwiftUI
+import UserNotifications
+
 
 struct EventsCalendarView: View {
     @EnvironmentObject var eventStore: EventStore
@@ -24,6 +26,7 @@ struct EventsCalendarView: View {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button(action: {
                         formType = .new
+
                     }) {
                         Image(systemName: "plus.circle.fill")
                             .imageScale(.medium)

@@ -4,12 +4,12 @@ import SwiftUI
 struct ProfileView: View {
     let user: User
     @State private var editProfileShowing = false
-    
     @ObservedObject var viewModel: ProfileViewModel
     
     init(user: User) {
         self.user = user
         self.viewModel = ProfileViewModel(user: user)
+        
     }
     
 
@@ -23,7 +23,9 @@ struct ProfileView: View {
             ScrollView {
                 Text("Ok!")
                 }
-            .navigationTitle(user.name)
+            
+        
+
             }
         }
     }

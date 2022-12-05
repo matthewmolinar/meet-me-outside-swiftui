@@ -8,6 +8,7 @@ import Foundation
 import SwiftUI
 import Firebase
 import ConfettiSwiftUI
+import UserNotifications
 
 
 struct EventFormView: View {
@@ -63,9 +64,14 @@ struct EventFormView: View {
                                     "uid": user.id, "date": viewModel.date, "note": viewModel.note, "id": idString
                                 ]
                                 
+                              
+                                
+                                
                                 docRef.setData(data) { _ in
                                     counter += 1
+                                    
                                     print("DEBUG: uploaded event")
+                                
                                 }
                             }
 //                            dismiss()
