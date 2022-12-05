@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import UserNotifications
 
 struct SettingsView: View {
     @State var showDeleteAccountAlert = false
@@ -39,6 +40,41 @@ struct SettingsView: View {
                         }))
                     }
                         
+                    
+                }
+                
+                Section(header: Text("Privacy")) {
+                    Button(action: {
+                        let center = UNUserNotificationCenter.current()
+                        center.getNotificationSettings(completionHandler: { settings in
+                            if settings.authorizationStatus != .authorized {
+                                // request for notification permissions for alert, sound and badge
+                                center.requestAuthorization(options: [.alert, .sound, .badge]) {
+                                   granted, error in
+
+                                   if let error = error {
+                                        // handle the error here
+                                        print("error : \(error)")
+                                   }
+                                }
+                            }
+                        })
+                        let content = UNMutableNotificationContent()
+                        content.title = "Take a break"
+                        content.subtitle = "Please stop working now"
+                        content.sound = UNNotificationSound.default
+
+                        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
+
+                        let request = UNNotificationRequest(identifier: "swaggggg", content: content,
+                           trigger:trigger)
+
+                        UNUserNotificationCenter.current().add(request)
+                    } ){
+                        SettingRowView(title: "Allow Notifications", systemImageName: "exclamationmark.bubble")
+                    }
+                        
+                    
                     
                 }
                 

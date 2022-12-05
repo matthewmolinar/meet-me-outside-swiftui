@@ -82,7 +82,7 @@ struct ContentView: View {
                             
                             SettingsView()
                                 .tabItem {
-                                    Image(systemName: "lock.fill")
+                                    Image(systemName: "gear")
                                     Text("Settings")
                                 }
                         }
