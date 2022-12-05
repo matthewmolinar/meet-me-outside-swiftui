@@ -15,6 +15,8 @@ struct User: Identifiable {
     let grade: String
     let profilePictureUrl: String
     let profileDescription: String
+    let username: String
+    
     
     
     init(dictionary: [String: Any]) {
@@ -24,5 +26,6 @@ struct User: Identifiable {
         self.grade = dictionary["grade"] as? String ?? ""
         self.profilePictureUrl = dictionary["profilePictureUrl"] as? String ?? ""
         self.profileDescription = dictionary["profileDescription"] as? String ?? ""
+        self.username = dictionary["username"] as? String ?? ""
      }
 }

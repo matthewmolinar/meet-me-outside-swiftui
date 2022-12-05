@@ -63,7 +63,7 @@ class AuthViewModel: ObservableObject {
                         "name": name,
                         "age": "-",
                         "grade": "-",
-                        "profilePicture": "cM5APPYlLEThu3QbBAxP2ffQmSq1.png",
+                        "profilePictureUrl": profileImageUrl,
                         "profileDescription": "Go Write your Profile Description!",
                         "uid": user.uid,
                         "username": username

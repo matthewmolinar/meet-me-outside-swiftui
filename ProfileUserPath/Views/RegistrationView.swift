@@ -66,7 +66,7 @@ struct RegistrationView: View {
                 TextField("Full Name", text: $name)
 
                 Button("Sign Up") {
-                    viewModel.registerUser(email: email, password: password, username: username, name: name)
+                    viewModel.registerUser(email: email, password: password, username: username, name: name, profileImage: image)
                 }
                 
                 
