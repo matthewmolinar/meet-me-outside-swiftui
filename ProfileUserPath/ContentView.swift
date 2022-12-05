@@ -87,7 +87,7 @@ struct ContentView: View {
                                 }
                         }
                         .navigationBarItems(leading: NavigationLink(destination: ScannerView()) {
-                            Text("QR Code")
+                            Image(systemName: "qrcode")
                         }
                                             )
                     }
