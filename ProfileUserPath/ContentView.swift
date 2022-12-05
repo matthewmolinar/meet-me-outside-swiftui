@@ -80,6 +80,12 @@ struct ContentView: View {
                                 Image(systemName: "list.triangle")
                                 Text("Events")
                             }
+                        
+                        NotificationsView()
+                            .tabItem {
+                                Image(systemName: "megaphone.fill")
+                                Text("Notifications")
+                            }
                     }
                     
                 }
