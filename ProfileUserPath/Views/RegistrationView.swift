@@ -12,6 +12,9 @@ import FirebaseFirestore
 struct RegistrationView: View {
     @State var email: String = ""
     @State var password: String = ""
+    @State var username: String = ""
+    @State var name: String = ""
+
     @EnvironmentObject var viewModel: AuthViewModel
     
     var body: some View {
@@ -19,8 +22,11 @@ struct RegistrationView: View {
             Section {
                 TextField("Email", text: $email)
                 TextField("Password", text: $password)
+                TextField("User Name", text: $username)
+                TextField("Full Name", text: $name)
+
                 Button("Sign Up") {
-                    viewModel.registerUser(email: email, password: password)
+                    viewModel.registerUser(email: email, password: password, username: username)
                     
                 }
             }

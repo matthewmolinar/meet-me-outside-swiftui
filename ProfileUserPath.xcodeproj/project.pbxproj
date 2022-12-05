@@ -256,9 +256,28 @@
 			path = Util;
 			sourceTree = "<group>";
 		};
+		71AE5883293E19DE004A17E3 /* Notifications */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Notifications;
+			sourceTree = "<group>";
+		};
+		71AE5884293E1A6B004A17E3 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				BF2869E3293458A6002EC628 /* UserCell.swift */,
+				BF2869E529345A0C002EC628 /* SearchBar.swift */,
+				BF2869D72934193C002EC628 /* SearchView.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
 		BF2869D1293412AA002EC628 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				71AE5884293E1A6B004A17E3 /* Search */,
+				71AE5883293E19DE004A17E3 /* Notifications */,
 				71AE5873293DD0D8004A17E3 /* Profile */,
 				BF2CA08F293D1BB300E0BAF8 /* Events */,
 				BF2869D2293412D7002EC628 /* Messages */,
@@ -267,9 +286,6 @@
 				EA600AED292E692A00A7E224 /* ScannerView.swift */,
 				71AE5876293DE95F004A17E3 /* RegistrationView.swift */,
 				EA890394292E6166008C8A81 /* CameraView.swift */,
-				BF2869D72934193C002EC628 /* SearchView.swift */,
-				BF2869E529345A0C002EC628 /* SearchBar.swift */,
-				BF2869E3293458A6002EC628 /* UserCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
