@@ -33,38 +33,34 @@ struct EventFormView: View {
                                 HStack {
                         Spacer()
                         Button {
-                            // UPDATE FIREBASE HERE!!!!
                             if viewModel.updating {
-                                // update this event
-                                let event = Event(id: viewModel.id!,
-                                                  eventType: viewModel.eventType,
-                                                  date: viewModel.date,
-                                                  note: viewModel.note)
-                                // ENCODE
-//                                let jsonEncoder = JSONEncoder()
-//                                do {
-//                                    let encodedEvent = try jsonEncoder.encode(event)
-//                                    let encodedStringEvent = String(data: encodedEvent, encoding: .utf8)!
-//                                    // push update to firebase.
-//
-//                                } catch {
-//                                    print(error.localizedDescription)
-//                                }
                                 
-//                                viewModel.uploadEvent(date: viewModel.date, note: viewModel.note)
-                                // might not need this anymore.
-                                eventStore.update(event)
+                                
+                                guard let uid = AuthViewModel.shared.userSession?.uid else { return }
+                                
+                                let docRef = Firestore.firestore().collection("events").document(viewModel.id!)
+                                print("DEBUG:  update id - \(viewModel.id!)")
+
+                                print("DEBUG:  update Note - \(viewModel.note)")
+                                print("DEBUG:  update Date - \(viewModel.date)")
+
+                                docRef.updateData([
+                                    "date": viewModel.date, "note": viewModel.note
+                                ])
+                                print("DEBUG: Updated Event")
+                                
                             } else {
                                 // create new event
                                 guard let user = AuthViewModel.shared.user else { return }
 
-                                let newEvent = Event(eventType: viewModel.eventType,
-                                                     date: viewModel.date,
-                                                     note: viewModel.note)
-                                let docRef = Firestore.firestore().collection("events").document()
+//                                let newEvent = Event(eventType: viewModel.eventType,
+//                                                     date: viewModel.date,
+//                                                     note: viewModel.note, uid: user.id)
+                                let idString = UUID().uuidString
+                                let docRef = Firestore.firestore().collection("events").document(idString)
                                 
                                 let data: [String: Any] = [
-                                    "uid": user.id, "date": viewModel.date, "note": viewModel.note
+                                    "uid": user.id, "date": viewModel.date, "note": viewModel.note, "id": idString
                                 ]
                                 
                                 docRef.setData(data) { _ in

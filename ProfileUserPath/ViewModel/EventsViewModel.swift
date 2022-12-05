@@ -26,17 +26,13 @@ class EventsViewModel: ObservableObject {
             changes.forEach { change in
                 let data = change.document.data()
                 // construct an Event object
-                if let eventType = change.document.data()["eventType"] as? String {
-                    if let date = change.document.data()["date"] as? Date {
-                        if let note = change.document.data()["note"] as? String {
-                            if let id = change.document.data()["id"] as? String {
-                                let eventObject = Event(date: date, note: note)
-                                
-                            }
+                if let date = change.document.data()["date"] as? Date {
+                    if let note = change.document.data()["note"] as? String {
+                        if let eventId = change.document.data()["id"] as? String {
+                            self.events.append(Event(id: eventId, date: date, note: note, uid: uid))
                         }
                     }
                 }
-//                self.events.append(Event(dictionary: data))
             }
         }
         

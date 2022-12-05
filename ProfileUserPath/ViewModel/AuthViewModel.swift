@@ -49,7 +49,8 @@ class AuthViewModel: ObservableObject {
                 "age": "-",
                 "grade": "-",
                 "profilePicture": "cM5APPYlLEThu3QbBAxP2ffQmSq1.png",
-                "profileDescription": "Go Write your Profile Description!"
+                "profileDescription": "Go Write your Profile Description!",
+                "uid": user.uid
             ]
             Firestore.firestore().collection("users").document(user.uid).setData(data) { _ in
                 print("uploading user data...")

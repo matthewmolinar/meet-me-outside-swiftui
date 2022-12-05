@@ -15,7 +15,7 @@ import Firebase
 @main
 struct ProfileUserPathApp: App {
     @State private var isLoggedIn = false
-    @StateObject var userEvents = EventStore(preview: true)
+    @StateObject var userEvents = EventStore(preview: false)
     
     init() {
         FirebaseApp.configure()
