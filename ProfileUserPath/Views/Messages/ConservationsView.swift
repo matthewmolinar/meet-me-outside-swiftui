@@ -12,17 +12,24 @@ struct ConservationsView: View {
     @State var isShowingNewMessageView = false
     @State var searchText = ""
     @State var user: User?
+    @State var showChat = false
     
     @ObservedObject var viewModel = ConversationsViewModel()
     
     
     var body: some View {
         ZStack(alignment: .bottomTrailing) {
+            
+            if let user = user {
+                NavigationLink(destination: ChatView(user: user),
+            isActive: $showChat,
+            label: {})
+            }
             ScrollView {
                 SearchBar(text: $searchText)
                 VStack {
                     ForEach(viewModel.recentMessages) { message in
-                        NavigationLink(destination: ChatView(), label: {
+                        NavigationLink(destination: ChatView(user: message.user), label: {
                             ConversationCell(message: message)
                         })
                     }
@@ -43,7 +50,7 @@ struct ConservationsView: View {
             .padding()
             // state var determines if this sheet is shown or not.
             .sheet(isPresented: $isShowingNewMessageView, content: {
-                NewMessageView(startChat: $isShowingNewMessageView, show: $isShowingNewMessageView, user: $user)
+                NewMessageView(show: $isShowingNewMessageView, startChat: $showChat, user: $user)
             })
         }
     }
