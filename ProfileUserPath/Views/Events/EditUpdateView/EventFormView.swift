@@ -35,7 +35,6 @@ struct EventFormView: View {
                         Button {
                             if viewModel.updating {
                                 
-                                
                                 guard let uid = AuthViewModel.shared.userSession?.uid else { return }
                                 
                                 let docRef = Firestore.firestore().collection("events").document(viewModel.id!)
@@ -53,9 +52,7 @@ struct EventFormView: View {
                                 // create new event
                                 guard let user = AuthViewModel.shared.user else { return }
 
-//                                let newEvent = Event(eventType: viewModel.eventType,
-//                                                     date: viewModel.date,
-//                                                     note: viewModel.note, uid: user.id)
+
                                 let idString = UUID().uuidString
                                 let docRef = Firestore.firestore().collection("events").document(idString)
                                 

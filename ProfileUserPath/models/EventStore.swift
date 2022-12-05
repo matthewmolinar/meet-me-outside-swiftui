@@ -18,7 +18,8 @@ class EventStore: ObservableObject {
 
     init(preview: Bool = false) {
         self.preview = preview
-        fetchEvents()
+//        fetchEvents()
+        fetchEventsSnapShotListener()
     }
 
     func fetchEvents() {
@@ -44,6 +45,35 @@ class EventStore: ObservableObject {
             }
         }
     }
+    
+    func fetchEventsSnapShotListener() {
+        if preview {
+            events = Event.sampleEvents
+        } else {
+            guard let uid = AuthViewModel.shared.userSession?.uid else { return }
+            
+            Firestore.firestore().collection("events").whereField("uid", isEqualTo: uid).addSnapshotListener { querySnapshot, error in
+                guard let documents = querySnapshot?.documents else {
+                    print("Error fetching snapshot documents: \(error?.localizedDescription)")
+                    return
+                }
+                var newEventsArray = [Event]()
+                for document in documents {
+                    print("DEBUG: \(document.data())")
+                    let timeStamp = document.data()["date"] as! Timestamp
+                    let date = Date(timeIntervalSince1970: TimeInterval(timeStamp.seconds))
+                    let eventId = document.data()["id"] as! String
+                    print("DEBUG: \(date)")
+                    let note = document.data()["note"] as! String
+                    // make event object
+                    let eventObject = Event(id: eventId, date: date, note: note, uid: uid)
+                    newEventsArray.append(eventObject)
+                }
+                self.events = newEventsArray
+                
+            }
+        }
+    }
 
     func delete(_ event: Event) {
         if let index = events.firstIndex(where: {$0.id == event.id}) {
@@ -57,13 +87,7 @@ class EventStore: ObservableObject {
     }
 
     func update(_ eventId: String) {
-//        if let index = events.firstIndex(where: {$0.id == event.id}) {
-//                movedEvent = events[index]
-//                events[index].date = event.date
-//                events[index].note = event.note
-//                events[index].eventType = event.eventType
-//                changedEvent = event
-//        }
+        return
     }
 
 }
