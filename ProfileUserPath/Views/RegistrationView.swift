@@ -15,8 +15,12 @@ struct RegistrationView: View {
     @State var password: String = ""
     @State var username: String = ""
     @State var name: String = ""
+    @State var age = ""
     @State var imagePickerShowing = false
     @State var image = UIImage()
+    var gradeOptions = ["Freshman", "Sophmore", "Junior", "Senior", "Super Senior", "Graduate"]
+    @State var gradeIndex = 0
+    @State var grade: String = ""
 
     @EnvironmentObject var viewModel: AuthViewModel
     
@@ -64,13 +68,27 @@ struct RegistrationView: View {
                 TextField("Password", text: $password)
                 TextField("User Name", text: $username)
                 TextField("Full Name", text: $name)
+                TextField("Age", text: $age)
+//                Picker(selection: $gradeIndex) {
+//                    ForEach(0 ..< gradeOptions.count) { index in
+//                        Text(gradeOptions[index])
+//                    }
+//                } label: {
+//                    Text("Choose Grade")
+//                }
+//                .onChange(of: $gradeIndex) {
+//                    $grade = gradeOptions[$gradeIndex]
+//                }
+                TextField("Grade", text: $grade)
 
                 Button("Sign Up") {
-                    viewModel.registerUser(email: email, password: password, username: username, name: name, profileImage: image)
+                    viewModel.registerUser(email: email, password: password, username: username, name: name, profileImage: image, age: age, grade: grade)
                 }
                 
                 
             }
+            
+            
             
         }
         .navigationTitle("Register")

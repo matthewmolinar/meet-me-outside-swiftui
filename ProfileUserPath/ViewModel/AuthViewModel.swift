@@ -37,7 +37,7 @@ class AuthViewModel: ObservableObject {
         }
     }
 
-    func registerUser(email: String, password: String, username: String, name: String, profileImage: UIImage) {
+    func registerUser(email: String, password: String, username: String, name: String, profileImage: UIImage, age: String, grade: String) {
         guard let imageData = profileImage.jpegData(compressionQuality: 0.3) else { return }
         let filename = NSUUID().uuidString
         let storageRef = Storage.storage().reference().child(filename)
@@ -61,10 +61,10 @@ class AuthViewModel: ObservableObject {
                     let data = [
                         "email": email,
                         "name": name,
-                        "age": "-",
-                        "grade": "-",
+                        "age": age,
+                        "grade": grade,
                         "profilePictureUrl": profileImageUrl,
-                        "profileDescription": "Go Write your Profile Description!",
+                        "profileDescription": "Edit profile to edit your profile description!",
                         "uid": user.uid,
                         "username": username
                     ]
