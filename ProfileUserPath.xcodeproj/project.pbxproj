@@ -43,6 +43,7 @@
 		717200ED293E73B100E9009F /* ColorSchemeChangeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717200EC293E73B100E9009F /* ColorSchemeChangeView.swift */; };
 		717200EF293E745200E9009F /* PasswordChangeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717200EE293E745200E9009F /* PasswordChangeView.swift */; };
 		717200F1293E746000E9009F /* DeleteAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717200F0293E746000E9009F /* DeleteAccountView.swift */; };
+		717200F3293E76A600E9009F /* FontStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717200F2293E76A600E9009F /* FontStore.swift */; };
 		71AE5870293DA10E004A17E3 /* EventsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71AE586F293DA10E004A17E3 /* EventsViewModel.swift */; };
 		71AE5872293DA294004A17E3 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71AE5871293DA294004A17E3 /* AuthViewModel.swift */; };
 		71AE5875293DD0E2004A17E3 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71AE5874293DD0E2004A17E3 /* ProfileView.swift */; };
@@ -110,6 +111,7 @@
 		717200EC293E73B100E9009F /* ColorSchemeChangeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSchemeChangeView.swift; sourceTree = "<group>"; };
 		717200EE293E745200E9009F /* PasswordChangeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordChangeView.swift; sourceTree = "<group>"; };
 		717200F0293E746000E9009F /* DeleteAccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteAccountView.swift; sourceTree = "<group>"; };
+		717200F2293E76A600E9009F /* FontStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontStore.swift; sourceTree = "<group>"; };
 		71AE586F293DA10E004A17E3 /* EventsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewModel.swift; sourceTree = "<group>"; };
 		71AE5871293DA294004A17E3 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		71AE5874293DD0E2004A17E3 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
@@ -246,6 +248,7 @@
 				BF2869DF293453DD002EC628 /* Message.swift */,
 				BF2CA086293D183500E0BAF8 /* EventStore.swift */,
 				BF2CA088293D19F800E0BAF8 /* Event.swift */,
+				717200F2293E76A600E9009F /* FontStore.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -553,6 +556,7 @@
 				3E0036DD291C602200CCBEE2 /* ProfileUserPathApp.swift in Sources */,
 				BF2CA096293D1C7C00E0BAF8 /* EventFormType.swift in Sources */,
 				717200ED293E73B100E9009F /* ColorSchemeChangeView.swift in Sources */,
+				717200F3293E76A600E9009F /* FontStore.swift in Sources */,
 				BF2CA09A293D1CC200E0BAF8 /* EventFormViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

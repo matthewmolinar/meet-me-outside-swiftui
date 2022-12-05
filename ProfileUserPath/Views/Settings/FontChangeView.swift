@@ -8,8 +8,21 @@
 import SwiftUI
 
 struct FontChangeView: View {
+    @EnvironmentObject var globalFont: FontStore
+    
     var body: some View {
-        Text("Change Font")
+        VStack {
+            HStack {
+                Spacer()
+                Text("Fonts")
+                Spacer()
+            }
+            Button(action: {
+                globalFont.fontName = "AmericanTypewriter-Bold"
+            }) {
+                Text("Change Font")
+            }
+        }
     }
 }
 
