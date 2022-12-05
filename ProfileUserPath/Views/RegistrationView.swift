@@ -28,29 +28,7 @@ struct RegistrationView: View {
     }
     
     
-    func registerUser(email: String, password: String, name: String,age: String, grade: String, profilePicture: String, profileDescription: String) {
-        Auth.auth().createUser(withEmail: email, password: password) { result, error in
-            if let error = error {
-                print("DEBUG: Error \(error.localizedDescription)")
-                return
-            }
-            
-            guard let user = result?.user else { return }
-            
-            let data = [
-                "email": $email,
-                "name": "Joe Doe",
-                "age": "-",
-                "grade": "-",
-                "profilePicture": "cM5APPYlLEThu3QbBAxP2ffQmSq1.png",
-                "profileDescription": "Go Write your Profile Description!"
-            ]
-            
-            Firestore.firestore().collection("users").document(user.uid).setData(data) { _ in
-                return
-            }
-        }
-    }
+    
 }
 
 
