@@ -7,6 +7,7 @@
 
 
 import Foundation
+import Firebase
 
 struct User: Identifiable {
     let id: String
@@ -16,6 +17,7 @@ struct User: Identifiable {
     let profilePictureUrl: String
     let profileDescription: String
     let username: String
+    let isCurrentUser: Bool
     
     
     
@@ -27,5 +29,6 @@ struct User: Identifiable {
         self.profilePictureUrl = dictionary["profilePictureUrl"] as? String ?? ""
         self.profileDescription = dictionary["profileDescription"] as? String ?? ""
         self.username = dictionary["username"] as? String ?? ""
+        self.isCurrentUser = Auth.auth().currentUser?.uid == self.id
      }
 }

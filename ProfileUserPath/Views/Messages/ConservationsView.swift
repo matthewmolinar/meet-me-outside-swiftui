@@ -11,6 +11,9 @@ struct ConservationsView: View {
     // state variable that determines if this view is presented or not
     @State var isShowingNewMessageView = false
     @State var searchText = ""
+    @State var user: User?
+    
+    @ObservedObject var viewModel = ConversationsViewModel()
     
     
     var body: some View {
@@ -18,9 +21,9 @@ struct ConservationsView: View {
             ScrollView {
                 SearchBar(text: $searchText)
                 VStack {
-                    ForEach(0..<20) { _ in
+                    ForEach(viewModel.recentMessages) { message in
                         NavigationLink(destination: ChatView(), label: {
-                            ConversationCell()
+                            ConversationCell(message: message)
                         })
                     }
                 }.padding()
@@ -40,7 +43,7 @@ struct ConservationsView: View {
             .padding()
             // state var determines if this sheet is shown or not.
             .sheet(isPresented: $isShowingNewMessageView, content: {
-                SearchView()
+                NewMessageView(startChat: $isShowingNewMessageView, show: $isShowingNewMessageView, user: $user)
             })
         }
     }

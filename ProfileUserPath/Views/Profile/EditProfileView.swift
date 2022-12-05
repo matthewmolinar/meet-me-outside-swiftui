@@ -24,13 +24,17 @@ struct EditProfileView: View {
     var body: some View {
         VStack {
             HStack {
-                Button(action: {}) {
+                Button(action: {
+                    isShowing.toggle()
+                }) {
                     Text("Cancel")
                 }
                 Spacer()
                 Text("Edit Profile")
                 Spacer()
-                Button(action: {}) {
+                Button(action: {
+                    isShowing.toggle()
+                }) {
                     Text("Done")
                 }
             }.padding()

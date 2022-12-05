@@ -46,6 +46,8 @@
 		71AE5886293E21E6004A17E3 /* ProfielViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71AE5885293E21E6004A17E3 /* ProfielViewModel.swift */; };
 		71AE5888293E24E0004A17E3 /* EditProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71AE5887293E24E0004A17E3 /* EditProfileView.swift */; };
 		71AE588A293E2559004A17E3 /* EditProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71AE5889293E2559004A17E3 /* EditProfileViewModel.swift */; };
+		71AE588C293E2B10004A17E3 /* ConversationsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71AE588B293E2B10004A17E3 /* ConversationsViewModel.swift */; };
+		71AE588E293E2CD8004A17E3 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71AE588D293E2CD8004A17E3 /* SearchViewModel.swift */; };
 		BF2869D4293412EC002EC628 /* ConservationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2869D3293412EC002EC628 /* ConservationsView.swift */; };
 		BF2869D629341300002EC628 /* ConversationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2869D529341300002EC628 /* ConversationCell.swift */; };
 		BF2869D82934193C002EC628 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2869D72934193C002EC628 /* SearchView.swift */; };
@@ -102,6 +104,8 @@
 		71AE5885293E21E6004A17E3 /* ProfielViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfielViewModel.swift; sourceTree = "<group>"; };
 		71AE5887293E24E0004A17E3 /* EditProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileView.swift; sourceTree = "<group>"; };
 		71AE5889293E2559004A17E3 /* EditProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewModel.swift; sourceTree = "<group>"; };
+		71AE588B293E2B10004A17E3 /* ConversationsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationsViewModel.swift; sourceTree = "<group>"; };
+		71AE588D293E2CD8004A17E3 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		BF2869D3293412EC002EC628 /* ConservationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConservationsView.swift; sourceTree = "<group>"; };
 		BF2869D529341300002EC628 /* ConversationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationCell.swift; sourceTree = "<group>"; };
 		BF2869D72934193C002EC628 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
@@ -242,6 +246,8 @@
 				71AE587F293DF25A004A17E3 /* ProfileViewModel.swift */,
 				71AE5885293E21E6004A17E3 /* ProfielViewModel.swift */,
 				71AE5889293E2559004A17E3 /* EditProfileViewModel.swift */,
+				71AE588B293E2B10004A17E3 /* ConversationsViewModel.swift */,
+				71AE588D293E2CD8004A17E3 /* SearchViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -466,6 +472,7 @@
 				BF2CA09F293D229800E0BAF8 /* CalendarView.swift in Sources */,
 				3EC5F60F292D83EF008FF7C5 /* LoginView.swift in Sources */,
 				EA600AEC292E691200A7E224 /* ScannerViewModel.swift in Sources */,
+				71AE588C293E2B10004A17E3 /* ConversationsViewModel.swift in Sources */,
 				71AE5875293DD0E2004A17E3 /* ProfileView.swift in Sources */,
 				3E0036ED291DB3F600CCBEE2 /* ImagePickerView.swift in Sources */,
 				71AE5888293E24E0004A17E3 /* EditProfileView.swift in Sources */,
@@ -495,6 +502,7 @@
 				BF2CA091293D1BC400E0BAF8 /* EventsCalendarView.swift in Sources */,
 				BF2CA09D293D1D3700E0BAF8 /* ListViewRow.swift in Sources */,
 				EA890391292E592A008C8A81 /* ImageLoader.swift in Sources */,
+				71AE588E293E2CD8004A17E3 /* SearchViewModel.swift in Sources */,
 				3E0036DD291C602200CCBEE2 /* ProfileUserPathApp.swift in Sources */,
 				BF2CA096293D1C7C00E0BAF8 /* EventFormType.swift in Sources */,
 				BF2CA09A293D1CC200E0BAF8 /* EventFormViewModel.swift in Sources */,

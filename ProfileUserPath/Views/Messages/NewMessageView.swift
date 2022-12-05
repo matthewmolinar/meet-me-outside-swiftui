@@ -11,6 +11,8 @@ struct NewMessageView: View {
     @State var searchText = ""
     @Binding var startChat: Bool
     @Binding var show: Bool
+    @Binding var user: User?
+    @ObservedObject var viewModel = SearchViewModel(config: .newMessage)
 
     var body: some View {
         
@@ -28,8 +30,3 @@ struct NewMessageView: View {
         }
     }
 
-struct NewMessageView_Previews: PreviewProvider {
-    static var previews: some View {
-        NewMessageView(startChat: .constant(true), show: .constant(true))
-    }
-}
