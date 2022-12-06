@@ -23,6 +23,7 @@ struct EditProfileView: View {
     @State var showProfileEditAlert = false
     @State var showNameEditAlert = false
     @State var showUserNameEditAlert = false
+    @State var selectedImage: UIImage?
     
 
     
@@ -56,33 +57,46 @@ struct EditProfileView: View {
                     Spacer()
                     Button(action: {
                         // update firebase
-                        guard let imageData = image.jpegData(compressionQuality: 0.3) else { return }
-                        let filename = NSUUID().uuidString
-                        let storageRef = Storage.storage().reference().child(filename)
-                        
-                        storageRef.putData(imageData, metadata: nil) { _, error in
-                            if let error = error {
-                                print("DEBUG: failed to upload image: \(error.localizedDescription)")
-                                return
-                            }
+                        if selectedImage != nil {
+                            guard let imageData = image.jpegData(compressionQuality: 0.3) else { return }
+                            let filename = NSUUID().uuidString
+                            let storageRef = Storage.storage().reference().child(filename)
                             
-                            storageRef.downloadURL { url, _ in
-                                guard let profileImageUrl = url?.absoluteString else { return }
+                            storageRef.putData(imageData, metadata: nil) { _, error in
+                                if let error = error {
+                                    print("DEBUG: failed to upload image: \(error.localizedDescription)")
+                                    return
+                                }
                                 
-                                print("DEBUG: profileImageUrl \(profileImageUrl)")
-                                
-                                guard let uid = AuthViewModel.shared.userSession?.uid else { return }
-                                print("DEBUG: uid \(uid)")
-                                let docRef = Firestore.firestore().collection("users").document(uid)
-                                
-                                docRef.updateData([
-//                                    "name": $name,
-//                                    "username": $username,
-                                    "profileDescription": description,
-                                    "profilePictureUrl": profileImageUrl
-                                ])
+                                storageRef.downloadURL { url, _ in
+                                    guard let profileImageUrl = url?.absoluteString else { return }
+                                    
+                                    print("DEBUG: profileImageUrl \(profileImageUrl)")
+                                    
+                                    guard let uid = AuthViewModel.shared.userSession?.uid else { return }
+                                    print("DEBUG: uid \(uid)")
+                                    let docRef = Firestore.firestore().collection("users").document(uid)
+                                    
+                                    docRef.updateData([
+                                        "name": name,
+                                        "username": username,
+                                        "profileDescription": description,
+                                        "profilePictureUrl": profileImageUrl
+                                    ])
+                                }
                             }
+                        } else {
+                            guard let uid = AuthViewModel.shared.userSession?.uid else { return }
+                            print("DEBUG: uid \(uid)")
+                            let docRef = Firestore.firestore().collection("users").document(uid)
+                            
+                            docRef.updateData([
+                                "name": name,
+                                "username": username,
+                                "profileDescription": description,
+                            ])
                         }
+                        
                         isShowing.toggle()
                     }) {
                         Text("Done")
@@ -117,7 +131,7 @@ struct EditProfileView: View {
                     }) {
                         Text("Take a photo")
                     }
-                }
+                }.padding(.bottom, 25)
                                VStack {
                                    HStack(alignment: .center, spacing: 64) {
                                        Text("Name")
@@ -125,7 +139,7 @@ struct EditProfileView: View {
                                            .frame(width: 100)
                                            
                                        
-                                       Text(user.name)
+                                       Text(name)
                                            .font(.system(size: 15))
                                            .foregroundColor(.blue)
                                            .onTapGesture {
@@ -151,7 +165,7 @@ struct EditProfileView: View {
                                        .frame(width: 100)
                                        
                                    
-                                   Text(user.username)
+                                   Text(username)
                                        .font(.system(size: 15))
                                        .foregroundColor(.blue)
                                        .onTapGesture {
@@ -178,7 +192,7 @@ struct EditProfileView: View {
                                        .frame(width: 100)
                                        
                                    
-                                   Text(user.profileDescription)
+                                   Text(description)
                                        .font(.system(size: 15))
                                        .foregroundColor(.blue)
                                        .onTapGesture {
@@ -200,7 +214,12 @@ struct EditProfileView: View {
                 Spacer()
                 
             }
-            .sheet(isPresented: $showSheet) {
+//            .sheet(isPresented: $showSheet) {
+//                ImagePicker(sourceType: .photoLibrary, selectedImage: $image)
+//            }
+            .sheet(isPresented: $showSheet, onDismiss: {
+                selectedImage = image
+            } ) {
                 ImagePicker(sourceType: .photoLibrary, selectedImage: $image)
             }
         }

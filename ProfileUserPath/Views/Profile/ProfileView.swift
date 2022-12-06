@@ -26,10 +26,15 @@ struct ProfileView: View {
             
             ScrollView {
                 if selectedFilter == .events {
-                    ForEach(viewModel.userEvents) { event in
-                        ProfileListViewRow(event: event, formType: $formType)
-                            .padding()
+                    if viewModel.userEvents.count > 0 {
+                        ForEach(viewModel.userEvents) { event in
+                            ProfileListViewRow(event: event, formType: $formType)
+                                .padding()
+                        }
+                    } else {
+                        EmptyListViewRow()
                     }
+                    
                 }
                 }
             .background(Color("Custom ScrollView"))

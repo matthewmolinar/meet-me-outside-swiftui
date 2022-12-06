@@ -25,7 +25,7 @@ struct EventsListView: View {
                     }
                 }
             }
-            .navigationTitle("Calendar Events")
+            .navigationTitle("Your events")
             .sheet(item: $formType) { $0 }
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {

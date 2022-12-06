@@ -38,7 +38,7 @@ struct EventsCalendarView: View {
                 DaysEventsListView(dateSelected: $dateSelected)
                     .presentationDetents([.medium, .large])
             }
-                    .navigationTitle("Calendar")
+                    .navigationTitle("Your calendar")
             
             
         }

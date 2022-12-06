@@ -53,7 +53,6 @@ struct ContentView: View {
                                     
                             }
                             
-                            .navigationTitle("Your Profile")
                             
                                     
                             // Third tab TODO: Calendar
