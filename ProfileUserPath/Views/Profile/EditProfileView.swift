@@ -78,7 +78,7 @@ struct EditProfileView: View {
                                 docRef.updateData([
 //                                    "name": $name,
 //                                    "username": $username,
-//                                    "description": $description,
+                                    "profileDescription": description,
                                     "profilePictureUrl": profileImageUrl
                                 ])
                             }
