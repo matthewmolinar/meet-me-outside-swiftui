@@ -35,16 +35,39 @@ struct ProfileView: View {
                                 .padding()
                         }
                     } else {
-                        EmptyListViewRow()
+                        if viewModel.user.isCurrentUser {
+                            EmptyListViewRow()
+                        } else {
+                            HStack {
+                                VStack(alignment: .leading) {
+                                    Spacer()
+                                    HStack {
+                                        Spacer()
+                                        Text("\(user.name) doesn't have any events :'(")
+                                            .padding(.bottom, 25)
+                                        Spacer()
+                                    }
+                                   
+                                   Spacer()
+                                }.padding()
+                                Spacer()
+                                
+                            }
+                        }
                     }
                     
                 } else {
-                    Image(uiImage: generateQRCode(from: "\(user.name)\n\(user.username)"))
-                        .interpolation(.none)
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 200, height: 200)
-                }
+                    HStack {
+                        Spacer()
+                        Image(uiImage: generateQRCode(from: "\(user.name)\n\(user.username)"))
+                            .interpolation(.none)
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 200, height: 200)
+                        Spacer()
+
+                    }
+                                    }
                 }
             .background(Color("Custom ScrollView"))
             .navigationTitle(user.name)
