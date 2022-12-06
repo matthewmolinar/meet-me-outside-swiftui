@@ -1,17 +1,20 @@
 import SwiftUI
+import CoreImage.CIFilterBuiltins
 
 
 struct ProfileView: View {
     let user: User
+    
     @State private var editProfileShowing = false
     @ObservedObject var viewModel: ProfileViewModel
     @State private var formType: EventFormType?
     @State var selectedFilter: FilterOptionsProfile = .events
+    let context = CIContext()
+    let filter = CIFilter.qrCodeGenerator()
     
     init(user: User) {
         self.user = user
         self.viewModel = ProfileViewModel(user: user)
-        
     }
     
 
@@ -35,6 +38,12 @@ struct ProfileView: View {
                         EmptyListViewRow()
                     }
                     
+                } else {
+                    Image(uiImage: generateQRCode(from: "\(user.name)\n\(user.username)"))
+                        .interpolation(.none)
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 200, height: 200)
                 }
                 }
             .background(Color("Custom ScrollView"))
@@ -44,5 +53,17 @@ struct ProfileView: View {
 
             }
         }
+    
+    func generateQRCode(from string: String) -> UIImage {
+        filter.message = Data(string.utf8)
+
+        if let outputImage = filter.outputImage {
+            if let cgimg = context.createCGImage(outputImage, from: outputImage.extent) {
+                return UIImage(cgImage: cgimg)
+            }
+        }
+
+        return UIImage(systemName: "xmark.circle") ?? UIImage()
+    }
     }
 
