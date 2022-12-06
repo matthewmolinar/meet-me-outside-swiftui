@@ -3,7 +3,7 @@ import SwiftUI
 
 
 class DarkModeStore: ObservableObject {
-    @Published var colorSchemeProperty: ColorScheme = .light
+    @Published var colorSchemeProperty: ColorScheme = .dark
     
     init() {
         

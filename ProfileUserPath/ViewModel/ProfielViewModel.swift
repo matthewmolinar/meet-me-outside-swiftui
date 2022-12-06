@@ -23,7 +23,7 @@ class ProfileViewModel: ObservableObject {
         
         guard let uid = AuthViewModel.shared.userSession?.uid else { return }
         
-        Firestore.firestore().collection("events").whereField("uid", isEqualTo: uid).addSnapshotListener { querySnapshot, error in
+        Firestore.firestore().collection("events").whereField("uid", isEqualTo: user.id).addSnapshotListener { querySnapshot, error in
             guard let documents = querySnapshot?.documents else {
                 print("Error fetching snapshot documents: \(error?.localizedDescription)")
                 return
@@ -37,7 +37,7 @@ class ProfileViewModel: ObservableObject {
                 print("DEBUG: \(date)")
                 let note = document.data()["note"] as! String
                 // make event object
-                let eventObject = Event(id: eventId, date: date, note: note, uid: uid)
+                let eventObject = Event(id: eventId, date: date, note: note, uid: self.user.id)
                 newEventsArray.append(eventObject)
             }
             self.userEvents = newEventsArray

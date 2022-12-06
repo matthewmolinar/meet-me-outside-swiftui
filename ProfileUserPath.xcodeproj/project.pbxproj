@@ -36,6 +36,9 @@
 		3EC5F60F292D83EF008FF7C5 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EC5F60E292D83EF008FF7C5 /* LoginView.swift */; };
 		3EC5F613292E7927008FF7C5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3EC5F612292E7927008FF7C5 /* GoogleService-Info.plist */; };
 		716C07EE293EC6E200A3DA3F /* ProfileCreate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716C07ED293EC6E200A3DA3F /* ProfileCreate.swift */; };
+		716C07F0293EDB5E00A3DA3F /* ProfileListViewRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716C07EF293EDB5E00A3DA3F /* ProfileListViewRow.swift */; };
+		716C07F2293EDDFD00A3DA3F /* MessageFilterButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716C07F1293EDDFD00A3DA3F /* MessageFilterButtonView.swift */; };
+		716C07F4293EDF0100A3DA3F /* SocialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716C07F3293EDF0100A3DA3F /* SocialView.swift */; };
 		717200E2293E68EB00E9009F /* ConfettiSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 717200E1293E68EB00E9009F /* ConfettiSwiftUI */; };
 		717200E5293E6DB100E9009F /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717200E4293E6DB100E9009F /* SettingsView.swift */; };
 		717200E7293E71C400E9009F /* FontChangeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717200E6293E71C400E9009F /* FontChangeView.swift */; };
@@ -108,6 +111,9 @@
 		3EC5F60E292D83EF008FF7C5 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		3EC5F612292E7927008FF7C5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		716C07ED293EC6E200A3DA3F /* ProfileCreate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCreate.swift; sourceTree = "<group>"; };
+		716C07EF293EDB5E00A3DA3F /* ProfileListViewRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileListViewRow.swift; sourceTree = "<group>"; };
+		716C07F1293EDDFD00A3DA3F /* MessageFilterButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageFilterButtonView.swift; sourceTree = "<group>"; };
+		716C07F3293EDF0100A3DA3F /* SocialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialView.swift; sourceTree = "<group>"; };
 		717200E4293E6DB100E9009F /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		717200E6293E71C400E9009F /* FontChangeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontChangeView.swift; sourceTree = "<group>"; };
 		717200E8293E71D500E9009F /* SettingRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingRowView.swift; sourceTree = "<group>"; };
@@ -306,6 +312,7 @@
 				71AE5887293E24E0004A17E3 /* EditProfileView.swift */,
 				717200F6293EAABA00E9009F /* ProfileFilterButtons.swift */,
 				716C07ED293EC6E200A3DA3F /* ProfileCreate.swift */,
+				716C07EF293EDB5E00A3DA3F /* ProfileListViewRow.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -364,6 +371,8 @@
 				BF2869DD29345034002EC628 /* ChatBubble.swift */,
 				BF2869E129345721002EC628 /* MessageView.swift */,
 				BFD041C329349BB5001B727D /* NewMessageView.swift */,
+				716C07F1293EDDFD00A3DA3F /* MessageFilterButtonView.swift */,
+				716C07F3293EDF0100A3DA3F /* SocialView.swift */,
 			);
 			path = Messages;
 			sourceTree = "<group>";
@@ -523,6 +532,7 @@
 				717200F7293EAABA00E9009F /* ProfileFilterButtons.swift in Sources */,
 				717200E7293E71C400E9009F /* FontChangeView.swift in Sources */,
 				BF2869DC29341B05002EC628 /* ChatView.swift in Sources */,
+				716C07F2293EDDFD00A3DA3F /* MessageFilterButtonView.swift in Sources */,
 				716C07EE293EC6E200A3DA3F /* ProfileCreate.swift in Sources */,
 				3E00373B292918A500CCBEE2 /* AppErrors.swift in Sources */,
 				BF2CA09F293D229800E0BAF8 /* CalendarView.swift in Sources */,
@@ -553,11 +563,13 @@
 				71AE5886293E21E6004A17E3 /* ProfielViewModel.swift in Sources */,
 				717200EB293E733500E9009F /* DarkModeToggleView.swift in Sources */,
 				EA890393292E5975008C8A81 /* FirebaseImage.swift in Sources */,
+				716C07F4293EDF0100A3DA3F /* SocialView.swift in Sources */,
 				BF2869E0293453DD002EC628 /* Message.swift in Sources */,
 				BF2869D4293412EC002EC628 /* ConservationsView.swift in Sources */,
 				71AE587C293DF227004A17E3 /* ProfileHeaderView.swift in Sources */,
 				71AE5890293E3274004A17E3 /* ChatViewModel.swift in Sources */,
 				3E003735292913B800CCBEE2 /* User.swift in Sources */,
+				716C07F0293EDB5E00A3DA3F /* ProfileListViewRow.swift in Sources */,
 				71AE5880293DF25A004A17E3 /* ProfileViewModel.swift in Sources */,
 				EA600AEE292E692A00A7E224 /* ScannerView.swift in Sources */,
 				BF2CA091293D1BC400E0BAF8 /* EventsCalendarView.swift in Sources */,

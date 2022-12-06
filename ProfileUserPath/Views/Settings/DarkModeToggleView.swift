@@ -9,7 +9,7 @@ import SwiftUI
 
 struct DarkModeToggleView: View {
     @EnvironmentObject var darkModeConfig: DarkModeStore
-    @State var darkModeIsOn = false
+    @State var darkModeIsOn = true
 
     
     var body: some View {

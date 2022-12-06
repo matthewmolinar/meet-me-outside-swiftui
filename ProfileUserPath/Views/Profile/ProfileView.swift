@@ -20,18 +20,20 @@ struct ProfileView: View {
         VStack {
             ProfileHeaderView(viewModel: viewModel)
                 .padding()
-            ProfileActionButtonView(editProfileShowing: $editProfileShowing)
+            ProfileActionButtonView(editProfileShowing: $editProfileShowing, isCurrentUser: viewModel.user.isCurrentUser, profileViewModel: viewModel)
             
             FilterButtonView(selectedOption: $selectedFilter)
             
             ScrollView {
                 if selectedFilter == .events {
                     ForEach(viewModel.userEvents) { event in
-                        ListViewRow(event: event, formType: $formType)
+                        ProfileListViewRow(event: event, formType: $formType)
                             .padding()
                     }
                 }
                 }
+            .background(Color("Custom ScrollView"))
+            .navigationTitle(user.name)
             
         
 

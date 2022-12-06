@@ -46,11 +46,15 @@ struct EventFormView: View {
 
                                 print("DEBUG:  update Note - \(viewModel.note)")
                                 print("DEBUG:  update Date - \(viewModel.date)")
-
+                                eventStore.movedEvent = Event(id: viewModel.id!,
+                                                              eventType: .unspecified, date: viewModel.date, note: viewModel.note, uid: uid)
+                                
                                 docRef.updateData([
                                     "date": viewModel.date, "note": viewModel.note
                                 ])
                                 print("DEBUG: Updated Event")
+                                
+                                
                                 
                             } else {
                                 // create new event
@@ -63,6 +67,8 @@ struct EventFormView: View {
                                 let data: [String: Any] = [
                                     "uid": user.id, "date": viewModel.date, "note": viewModel.note, "id": idString
                                 ]
+                                
+                                eventStore.changedEvent = Event(id: idString, eventType: .unspecified, date: viewModel.date, note: viewModel.note, uid: user.id)
                                 
                               
                                 

@@ -56,19 +56,6 @@ struct ContentView: View {
                             .navigationTitle("Your Profile")
                             
                                     
-                                    
-
-                            
-                            // Second tab
-                            ConservationsView()
-                                .background(Color("Custom Background"))
-                                .tabItem {
-                                    Image(systemName: "message")
-                                    Text("Groups")
-                                }
-                            
-                            
-                            
                             // Third tab TODO: Calendar
                             EventsCalendarView()
                                 .background(Color("Custom Background"))
@@ -76,6 +63,19 @@ struct ContentView: View {
                                     Image(systemName: "calendar.circle.fill")
                                     Text("Calendar")
                                 }
+
+                            
+                            // Second tab
+                            SocialView()
+                                .background(Color("Custom Background"))
+                                .tabItem {
+                                    Image(systemName: "message")
+                                    Text("Social")
+                                }
+                            
+                            
+                            
+                            
                             
                             EventsListView()
                                 .background(Color("Custom Background"))

@@ -80,6 +80,9 @@ class EventStore: ObservableObject {
         if let index = events.firstIndex(where: {$0.id == event.id}) {
             changedEvent = events.remove(at: index)
         }
+        
+        // now delete from firestore
+        Firestore.firestore().collection("events").document(event.id).delete()
     }
 
     func add(_ event: Event) {
