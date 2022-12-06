@@ -1,10 +1,3 @@
-//
-//  ChatBubble.swift
-//  ProfileUserPath
-//
-//  Created by Matthew Molinar on 11/27/22.
-//
-
 import SwiftUI
 
 struct ChatBubble: Shape {

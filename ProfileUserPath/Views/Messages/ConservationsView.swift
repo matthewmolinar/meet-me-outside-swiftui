@@ -1,10 +1,3 @@
-//
-//  ConservationsView.swift
-//  ProfileUserPath
-//
-//  Created by Matthew Molinar on 11/27/22.
-//
-
 import SwiftUI
 
 struct ConservationsView: View {
@@ -16,10 +9,9 @@ struct ConservationsView: View {
     
     @ObservedObject var viewModel = ConversationsViewModel()
     
-    
+
     var body: some View {
         ZStack(alignment: .bottomTrailing) {
-            
             if let user = user {
                 NavigationLink(destination: ChatView(user: user),
             isActive: $showChat,

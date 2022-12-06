@@ -1,16 +1,8 @@
-//
-//  UserCell.swift
-//  ProfileUserPath
-//
-//  Created by Matthew Molinar on 11/27/22.
-//
-
 import SwiftUI
 import Kingfisher
 
 struct UserCell: View {
     let user: User
-    
     var body: some View {
         HStack {
                     // user profile img

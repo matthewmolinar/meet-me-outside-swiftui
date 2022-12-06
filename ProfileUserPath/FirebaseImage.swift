@@ -1,8 +1,3 @@
-//
-//  FirebaseImage.swift
-//  ProfileUserPath
-//
-//
 import Foundation
 import SwiftUI
 

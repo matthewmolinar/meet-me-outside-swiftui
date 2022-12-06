@@ -1,10 +1,3 @@
-//
-//  SearchBar.swift
-//  ProfileUserPath
-//
-//  Created by Matthew Molinar on 11/27/22.
-//
-
 import SwiftUI
 
 struct SearchBar: View {
@@ -25,7 +18,6 @@ struct SearchBar: View {
                     }
                 )
         }.padding(.horizontal, 10)
-        
     }
 }
 

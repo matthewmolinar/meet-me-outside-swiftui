@@ -1,9 +1,3 @@
-//
-//  ImageLoader.swift
-//  ProfileUserPath
-//
-//
-
 import Foundation
 import SwiftUI
 import Combine

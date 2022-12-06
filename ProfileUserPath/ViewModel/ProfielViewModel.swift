@@ -1,10 +1,3 @@
-//
-//  ProfielViewModel.swift
-//  ProfileUserPath
-//
-//  Created by Matthew Molinar on 12/5/22.
-//
-
 import SwiftUI
 import Firebase
 
@@ -13,14 +6,12 @@ class ProfileViewModel: ObservableObject {
     let user: User
     @Published var userEvents = [Event]()
     
-    
     init(user: User) {
         self.user = user
         fetchUserEvents()
     }
     
     func fetchUserEvents() {
-        
         guard let uid = AuthViewModel.shared.userSession?.uid else { return }
         
         Firestore.firestore().collection("events").whereField("uid", isEqualTo: user.id).addSnapshotListener { querySnapshot, error in
@@ -41,7 +32,6 @@ class ProfileViewModel: ObservableObject {
                 newEventsArray.append(eventObject)
             }
             self.userEvents = newEventsArray
-            
         }
     }
 }

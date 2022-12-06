@@ -1,9 +1,3 @@
-//
-//  ContentView.swift
-//  ProfileUserPath
-//
-//
-
 import SwiftUI
 import Firebase
 import PromiseKit

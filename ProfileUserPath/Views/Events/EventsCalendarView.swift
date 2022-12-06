@@ -1,10 +1,3 @@
-//
-//  EventsCalendarView.swift
-//  ProfileUserPath
-//
-//  Created by Matthew Molinar on 12/4/22.
-//
-
 import SwiftUI
 import UserNotifications
 
@@ -20,7 +13,7 @@ struct EventsCalendarView: View {
         NavigationStack {
             ScrollView {
                 CalendarView(interval: DateInterval(start: .distantPast, end: .distantFuture), eventStore: eventStore, displayEvents: $displayEvents, dateSelected: $dateSelected)
-                
+
             }
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
@@ -39,8 +32,6 @@ struct EventsCalendarView: View {
                     .presentationDetents([.medium, .large])
             }
                     .navigationTitle("Your calendar")
-            
-            
         }
     }
 }

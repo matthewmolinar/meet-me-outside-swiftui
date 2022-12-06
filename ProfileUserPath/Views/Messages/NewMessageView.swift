@@ -1,10 +1,3 @@
-//
-//  NewMessageView.swift
-//  ProfileUserPath
-//
-//  Created by Matthew Molinar on 11/28/22.
-//
-
 import SwiftUI
 
 struct NewMessageView: View {

@@ -1,9 +1,3 @@
-//
-//  EventFormView.swift
-//  ProfileUserPath
-//
-//  Created by Matthew Molinar on 12/4/22.
-//
 import Foundation
 import SwiftUI
 import Firebase
@@ -80,7 +74,6 @@ struct EventFormView: View {
                                 
                                 }
                             }
-//                            dismiss()
                         } label: {
                             Text(viewModel.updating ? "Update Event" : "Add Event")
                         }

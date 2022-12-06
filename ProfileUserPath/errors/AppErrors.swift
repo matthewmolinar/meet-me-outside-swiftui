@@ -1,10 +1,3 @@
-//
-//  AppErrors.swift
-//  ProfileUserPath
-//
-//  Created by Amber Etana Vasquez on 11/19/22.
-//
-
 import Foundation
 
 enum AppError: Error {

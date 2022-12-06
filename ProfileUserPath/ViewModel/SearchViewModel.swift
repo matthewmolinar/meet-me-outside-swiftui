@@ -1,16 +1,7 @@
-//
-//  SearchViewModel.swift
-//  meetmeoutside
-//
-//  Created by Matthew Molinar on 11/29/22.
-//
-
 import Foundation
 import Firebase
 
 import SwiftUI
-
-
 
 enum SearchViewModelConfiguration {
     case search
@@ -37,14 +28,6 @@ class SearchViewModel: ObservableObject {
             case .search:
                 self.users = users
             }
-            
-            
-//            print("DEBUG: Users \(users)")
-            
-//            documents.forEach { document in
-//                let user = User(dictionary: document.data())
-//                self.users.append(user)
-//            }
         })
     }
     

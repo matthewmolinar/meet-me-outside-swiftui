@@ -1,8 +1,3 @@
-//
-//  QrCodeCameraDelegate.swift
-//  ProfileUserPath
-//
-//
 
 import Foundation
 import AVFoundation

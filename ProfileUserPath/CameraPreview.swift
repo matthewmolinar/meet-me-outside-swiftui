@@ -1,8 +1,3 @@
-//
-//  CameraPreview.swift
-//  ProfileUserPath
-//
-//
 
 import Foundation
 import UIKit

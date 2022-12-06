@@ -22,7 +22,6 @@ class ChatViewModel: ObservableObject {
         guard let uid = AuthViewModel.shared.userSession?.uid else { return }
         
         let query = Firestore.firestore().collection("messages").document(uid).collection(user.id)
-//        query.order(by: "timestamp", descending: true)
         
         query.addSnapshotListener { snapshot, error in
             guard let changes = snapshot?.documentChanges.filter({ $0.type == .added}) else { return }

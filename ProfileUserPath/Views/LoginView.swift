@@ -1,9 +1,3 @@
-//
-//  LoginView.swift
-//  ProfileUserPath
-//
-//
-
 import SwiftUI
 import Firebase
 import FirebaseFirestore

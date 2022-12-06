@@ -1,9 +1,3 @@
-//
-//  AuthViewModel.swift
-//  ProfileUserPath
-//
-//  Created by Matthew Molinar on 12/4/22.
-//
 import SwiftUI
 import Foundation
 import Firebase
@@ -74,12 +68,8 @@ class AuthViewModel: ObservableObject {
                         self.fetchUser()
                     }
                 }
-                
             }
         }
-        
-        
-        
     }
 
     func signOut() {

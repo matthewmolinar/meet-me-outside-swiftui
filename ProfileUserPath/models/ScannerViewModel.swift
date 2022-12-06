@@ -1,10 +1,3 @@
-//
-//  ScannerViewModel.swift
-//  ProfileUserPath
-//
-//  Created by Ethan Bonin on 11/23/22.
-//
-
 import Foundation
 
 class ScannerViewModel: ObservableObject {

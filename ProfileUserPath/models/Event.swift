@@ -1,9 +1,3 @@
-//
-//  Event.swift
-//  ProfileUserPath
-//
-//  Created by Matthew Molinar on 12/4/22.
-//
 import Foundation
 
 struct Event: Identifiable, Codable {
@@ -42,8 +36,6 @@ struct Event: Identifiable, Codable {
         dateComponents.calendar = Calendar(identifier: .gregorian)
         return dateComponents
     }
-    
-    
 
     init(id: String = UUID().uuidString, eventType: EventType = .unspecified, date: Date, note: String, uid: String) {
         self.eventType = eventType

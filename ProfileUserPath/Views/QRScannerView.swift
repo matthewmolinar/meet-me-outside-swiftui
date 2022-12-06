@@ -1,9 +1,3 @@
-//
-//  QRScannerView.swift
-//  ProfileUserPath
-//
-//
-
 import Foundation
 
 import SwiftUI

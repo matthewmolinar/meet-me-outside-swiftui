@@ -1,10 +1,3 @@
-//
-//  EditProfileViewModel.swift
-//  ProfileUserPath
-//
-//  Created by Matthew Molinar on 12/5/22.
-//
-
 import SwiftUI
 
 class EditProfileViewModel: ObservableObject {
@@ -35,7 +28,5 @@ enum EditProfileOptions: Int, CaseIterable {
         case .desc: return user.profileDescription ?? "Edit your user description!"
         }
     }
-    
-    
 }
 
