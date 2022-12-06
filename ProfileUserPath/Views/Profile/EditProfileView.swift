@@ -69,12 +69,16 @@ struct EditProfileView: View {
                             storageRef.downloadURL { url, _ in
                                 guard let profileImageUrl = url?.absoluteString else { return }
                                 
+                                print("DEBUG: profileImageUrl \(profileImageUrl)")
+                                
                                 guard let uid = AuthViewModel.shared.userSession?.uid else { return }
+                                print("DEBUG: uid \(uid)")
                                 let docRef = Firestore.firestore().collection("users").document(uid)
+                                
                                 docRef.updateData([
-                                    "name": $name,
-                                    "username": $username,
-                                    "description": $description,
+//                                    "name": $name,
+//                                    "username": $username,
+//                                    "description": $description,
                                     "profilePictureUrl": profileImageUrl
                                 ])
                             }
