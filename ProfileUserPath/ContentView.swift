@@ -88,8 +88,10 @@ struct ContentView: View {
                         }
                         .navigationBarItems(leading: NavigationLink(destination: ScannerView()) {
                             Image(systemName: "qrcode")
-                        }
-                                            )
+                        })
+                            .onAppear() {
+                                UITabBar.appearance().backgroundColor = .green
+                            }
                     }
                 }
                 
@@ -113,3 +115,5 @@ struct ContentView: View {
                 .environmentObject(AuthViewModel())
         }
     }
+
+

@@ -10,6 +10,6 @@ class FontStore: ObservableObject {
     @Published var fontName: String
     
     init() {
-        self.fontName = "DIN Alternate"
+        self.fontName = "DIN Alternate" 
     }
 }
