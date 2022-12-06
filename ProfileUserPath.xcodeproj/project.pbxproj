@@ -35,6 +35,7 @@
 		3EC5F60B29292272008FF7C5 /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 3EC5F60A29292272008FF7C5 /* FirebaseStorageCombine-Community */; };
 		3EC5F60F292D83EF008FF7C5 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EC5F60E292D83EF008FF7C5 /* LoginView.swift */; };
 		3EC5F613292E7927008FF7C5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3EC5F612292E7927008FF7C5 /* GoogleService-Info.plist */; };
+		716C07EE293EC6E200A3DA3F /* ProfileCreate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716C07ED293EC6E200A3DA3F /* ProfileCreate.swift */; };
 		717200E2293E68EB00E9009F /* ConfettiSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 717200E1293E68EB00E9009F /* ConfettiSwiftUI */; };
 		717200E5293E6DB100E9009F /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717200E4293E6DB100E9009F /* SettingsView.swift */; };
 		717200E7293E71C400E9009F /* FontChangeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717200E6293E71C400E9009F /* FontChangeView.swift */; };
@@ -106,6 +107,7 @@
 		3E00373A292918A500CCBEE2 /* AppErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppErrors.swift; sourceTree = "<group>"; };
 		3EC5F60E292D83EF008FF7C5 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		3EC5F612292E7927008FF7C5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		716C07ED293EC6E200A3DA3F /* ProfileCreate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCreate.swift; sourceTree = "<group>"; };
 		717200E4293E6DB100E9009F /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		717200E6293E71C400E9009F /* FontChangeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontChangeView.swift; sourceTree = "<group>"; };
 		717200E8293E71D500E9009F /* SettingRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingRowView.swift; sourceTree = "<group>"; };
@@ -303,6 +305,7 @@
 				71AE5881293DF476004A17E3 /* ProfileActionButtonView.swift */,
 				71AE5887293E24E0004A17E3 /* EditProfileView.swift */,
 				717200F6293EAABA00E9009F /* ProfileFilterButtons.swift */,
+				716C07ED293EC6E200A3DA3F /* ProfileCreate.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -520,6 +523,7 @@
 				717200F7293EAABA00E9009F /* ProfileFilterButtons.swift in Sources */,
 				717200E7293E71C400E9009F /* FontChangeView.swift in Sources */,
 				BF2869DC29341B05002EC628 /* ChatView.swift in Sources */,
+				716C07EE293EC6E200A3DA3F /* ProfileCreate.swift in Sources */,
 				3E00373B292918A500CCBEE2 /* AppErrors.swift in Sources */,
 				BF2CA09F293D229800E0BAF8 /* CalendarView.swift in Sources */,
 				3EC5F60F292D83EF008FF7C5 /* LoginView.swift in Sources */,

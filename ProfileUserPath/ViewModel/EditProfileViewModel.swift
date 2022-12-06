@@ -24,7 +24,7 @@ enum EditProfileOptions: Int, CaseIterable {
         switch self {
         case .fullname: return "Name"
         case .username: return "Username"
-        case .desc: return "Bio"
+        case .desc: return "Desc"
         }
     }
     
@@ -32,7 +32,7 @@ enum EditProfileOptions: Int, CaseIterable {
         switch self {
         case .fullname: return user.name
         case .username: return user.username
-        case .desc: return user.profileDescription ?? "Edit your user bio!"
+        case .desc: return user.profileDescription ?? "Edit your user description!"
         }
     }
     
