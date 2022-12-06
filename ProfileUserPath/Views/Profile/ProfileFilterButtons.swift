@@ -41,7 +41,7 @@ struct FilterButtonView: View {
             }
             Rectangle()
                 .frame(width: underlineWidth - 24, height: 3, alignment: .center)
-                .foregroundColor(.blue)
+                .foregroundColor(Color("Custom Accent"))
                 .padding(.leading, padding)
                 .animation(.spring())
                 

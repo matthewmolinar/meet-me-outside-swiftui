@@ -44,8 +44,8 @@ struct ConservationsView: View {
                     .frame(width: 32, height: 32)
                     .padding()
             })
-            .background(Color(.systemBlue))
-            .foregroundColor(.white)
+            .background(Color("Custom Accent"))
+            .foregroundColor(Color("Profile Custom Text"))
             .clipShape(Circle())
             .padding()
             // state var determines if this sheet is shown or not.

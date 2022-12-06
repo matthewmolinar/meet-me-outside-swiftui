@@ -25,9 +25,9 @@ struct ProfileActionButtonView: View {
             }) {
                 Text("Edit Profile")
                     .frame(width: 120, height: 40)
-                    .background(Color.green)
-                    .foregroundColor(.white)
+                    .foregroundColor(Color("Profile Custom Text"))
             }
+            .background(Color("Custom Accent"))
             .cornerRadius(20)
             .fullScreenCover(isPresented: $editProfileShowing) {
                 EditProfileView(isShowing: $editProfileShowing, user: viewModel.user ?? User(dictionary: fakeData))
@@ -38,9 +38,10 @@ struct ProfileActionButtonView: View {
             }) {
                 Text("Sign Out")
                     .frame(width: 120, height: 40)
-                    .background(Color.green)
-                    .foregroundColor(.white)
+                    .foregroundColor(Color("Profile Custom Text"))
+                    
             }
+            .background(Color("Custom Accent"))
             .cornerRadius(20)
             
             

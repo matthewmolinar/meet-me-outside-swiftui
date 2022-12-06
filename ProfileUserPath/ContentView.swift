@@ -45,6 +45,7 @@ struct ContentView: View {
                         
                         TabView {
                             ProfileView(user: viewModel.user ?? User(dictionary: fakeData))
+                                .background(Color("Custom Background"))
                             
                             .tabItem {
                                 Image(systemName: "person.circle")
@@ -60,6 +61,7 @@ struct ContentView: View {
                             
                             // Second tab
                             ConservationsView()
+                                .background(Color("Custom Background"))
                                 .tabItem {
                                     Image(systemName: "message")
                                     Text("Groups")
@@ -69,18 +71,21 @@ struct ContentView: View {
                             
                             // Third tab TODO: Calendar
                             EventsCalendarView()
+                                .background(Color("Custom Background"))
                                 .tabItem {
                                     Image(systemName: "calendar.circle.fill")
                                     Text("Calendar")
                                 }
                             
                             EventsListView()
+                                .background(Color("Custom Background"))
                                 .tabItem {
                                     Image(systemName: "list.triangle")
                                     Text("Events")
                                 }
                             
                             SettingsView()
+                                .background(Color("Custom Background"))
                                 .tabItem {
                                     Image(systemName: "gear")
                                     Text("Settings")
@@ -89,9 +94,8 @@ struct ContentView: View {
                         .navigationBarItems(leading: NavigationLink(destination: ScannerView()) {
                             Image(systemName: "qrcode")
                         })
-                            .onAppear() {
-                                UITabBar.appearance().backgroundColor = .green
-                            }
+                        .accentColor(Color("Custom Accent"))
+                            
                     }
                 }
                 

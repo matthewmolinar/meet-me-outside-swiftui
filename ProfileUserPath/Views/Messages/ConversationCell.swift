@@ -24,13 +24,16 @@ struct ConversationCell: View {
                 VStack(alignment: .leading, spacing: 4) {
                     Text(message.user.name)
                         .font(.system(size: 14, weight: .semibold))
+                        .foregroundColor(Color("Custom Text"))
                     
                     Text(message.text)
                         .font(.system(size: 15))
                         .lineLimit(2)
+                        .foregroundColor(Color("Custom Text"))
                 }
                 .foregroundColor(.black)
                 .padding(.trailing)
+                Spacer()
             }
             Divider()
         }
